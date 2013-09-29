@@ -47,9 +47,9 @@ class UploadsController extends BaseController {
 		// return var_dump($input);
 		$files = Input::file('files'); // your file upload input field in the form should be named 'file'
 		// return var_dump($files);
-
+		$success = 'Successful: ';
 		foreach ($files as $file) {
-			$destinationPath = 'uploads/'.str_random(8);
+			$destinationPath = './files/';
 			// return var_dump($file);
 			$filename = $file->getClientOriginalName();
 			//$extension =$file->getClientOriginalExtension(); //if you need extension of the file
@@ -68,13 +68,10 @@ class UploadsController extends BaseController {
 			$uploadSuccess = $file->move($destinationPath, $filename);
 
 			if( $uploadSuccess ) {
-			   Response::json('success', 200); // or do a redirect with some message that file was uploaded
-			} else {
-			   Response::json('error', 400);
+			   $success .= $filename. ','; // or do a redirect with some message that file was uploaded
 			}
 		}
-		
-		return Response::json('success', 200);
+		return Response::json($success);
 
 	}
 
