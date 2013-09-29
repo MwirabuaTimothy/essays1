@@ -44,19 +44,38 @@ class UploadsController extends BaseController {
 	public function store()
 	{
 		$input = Input::all();
-		$validation = Validator::make($input, Upload::$rules);
+		// return var_dump($input);
+		$files = Input::file('files'); // your file upload input field in the form should be named 'file'
+		// return var_dump($files);
 
-		if ($validation->passes())
-		{
-			$this->upload->create($input);
+		foreach ($files as $file) {
+			$destinationPath = 'uploads/'.str_random(8);
+			// return var_dump($file);
+			$filename = $file->getClientOriginalName();
+			//$extension =$file->getClientOriginalExtension(); //if you need extension of the file
+			// $filename = $file['originalName'];
+			// return var_dump($filename);
+			
+			$upload['url'] = $destinationPath.$filename;
+			$upload['title'] = $filename;
+			$upload['order_id'] = $input['order_id'];
+			$upload['user_id'] = Auth::user() ? Auth::user()->id : '';
+			$upload['downloads'] = '';
+			$upload['category'] = $input['category'];
 
-			return Redirect::route('uploads.index');
+			$this->upload->create($upload);
+
+			$uploadSuccess = $file->move($destinationPath, $filename);
+
+			if( $uploadSuccess ) {
+			   Response::json('success', 200); // or do a redirect with some message that file was uploaded
+			} else {
+			   Response::json('error', 400);
+			}
 		}
+		
+		return Response::json('success', 200);
 
-		return Redirect::route('uploads.create')
-			->withInput()
-			->withErrors($validation)
-			->with('message', 'There were validation errors.');
 	}
 
 	/**
