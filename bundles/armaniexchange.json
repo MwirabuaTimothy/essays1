@@ -1,0 +1,41 @@
+{
+    "items":[
+        {
+            "image":"http://armaniexchange.scene7.com/is/image/armaniexchange/1321.10577.8814.423.zd1?$cart$",
+            "name":"A|X Active Angled Polo",
+            "link":"http://www.armaniexchange.com/product/a%7Cx+active+angled+polo.do?sortby=",
+            "id":"C6M814PO",
+            "color":"Indigo",
+            "color_code":"100182",
+            "size":"XX-small",
+            "size_code":"100714",
+            "quantity":1,
+            "price":58
+        },
+        {
+            "image":"http://armaniexchange.scene7.com/is/image/armaniexchange/1341.10945.5670.100.zd1?$cart$",
+            "name":"A|X Graphic Slub PoloOnline Exclusive",
+            "link":"http://www.armaniexchange.com/product/a%7Cx+graphic+slub+polo%3Cbr%3Eonline+exclusive.do?sortby=",
+            "id":"T6M670PO",
+            "color":"Black",
+            "color_code":"100023",
+            "size":"XX-small",
+            "size_code":"100714",
+            "quantity":1,
+            "price":48
+        },
+        {
+            "image":"http://armaniexchange.scene7.com/is/image/armaniexchange/1321.10688.8803.883.zd1?$cart$",
+            "name":"A|X Active Polo",
+            "link":"http://www.armaniexchange.com/product/a%7Cx+active+polo.do?sortby=",
+            "id":"C6M803PO",
+            "color":"Black/White",
+            "color_code":"100145",
+            "size":"XX-small",
+            "size_code":"100714",
+            "quantity":1,
+            "price":58
+        }
+    ],
+    "host":"armaniexchange.com"
+}

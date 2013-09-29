@@ -1,0 +1,53 @@
+<form method="POST" action="https://backoffice.host.iveri.com/Lite/Transactions/New/Authorise.aspx" accept-charset="UTF-8" name="iveri">
+
+<input name="_method" type="hidden" value="PATCH">
+
+<input name="_token" type="hidden" value="z1PWBFIBaCtOtZalGgLYreb1pIHVISbzGbZeUMa2">
+
+<select class="dropdown-menu" id="Ecom_BillTo_Postal_Name_Prefix" name="Ecom_BillTo_Postal_Name_Prefix"><option value="Mr.">Mr.</option><option value="Mrs.">Mrs.</option><option value="Miss.">Miss.</option><option value="Ms.">Ms.</option><option value="Prof.">Prof.</option><option value="Dr.">Dr.</option><option value="Sir.">Sir.</option></select>		
+
+<input maxlength="8" pattern="[A-z]+" required="" name="Ecom_BillTo_Postal_Name_First" type="text" value="tim">		
+
+<input pattern="[A-z]+" required="" name="Ecom_BillTo_Postal_Name_Last" type="text" value="k">		
+
+<input maxlength="30" pattern="[A-z\d]+@[A-z\d]+\.[A-z]{2,4}" required="" name="Ecom_BillTo_Online_Email" type="text" value="techytimo@gmail.com">	
+
+<input colspan="3" pattern="[\d]{13,19}" required="" name="Ecom_Payment_Card_Number" type="text" value="">	
+
+<select class="dropdown-menu" id="Ecom_Payment_Card_ExpDate_Month" maxlength="2" name="Ecom_Payment_Card_ExpDate_Month"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>					            
+
+<select class="dropdown-menu" id="Ecom_Payment_Card_ExpDate_Year" maxlength="4" name="Ecom_Payment_Card_ExpDate_Year"><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option></select>			
+
+<select class="dropdown-menu" id="Ecom_Payment_Card_Type" name="Ecom_Payment_Card_Type"><option value="Visa">Visa</option><option value="Mastercard">Mastercard</option><option value="American Express">American Express</option><option value="Discover">Discover</option></select>	
+
+
+
+<input type='hidden' name='Lite_Merchant_ApplicationId' value='981834E7-E051-4D6E-A587-D4FDD32A6F2B'>
+<input type='hidden' name='Lite_Order_Amount' value='529'>
+<input type='hidden' name='Lite_ConsumerOrderID_PreFix' value='INV'>
+<input type='hidden' name='Ecom_BillTo_Telecom_Phone_Number' value='0734567089'>
+<input type='hidden' name='Ecom_BillTo_Postal_City' value='Nairobi'>
+<input type='hidden' name='Ecom_Payment_Card_Protocols' value='iVeri'>
+<input type='hidden' name='Ecom_ConsumerOrderID' value='75'>
+<input type='hidden' name='Ecom_TransactionComplete' value='TRUE'>
+<input type='hidden' name='Lite_Order_LineItems_Product_1' value='A number of products for order 75'>
+<input type='hidden' name='Lite_Order_LineItems_Quantity_1' value='1'>
+<input type='hidden' name='Lite_Order_LineItems_Amount_1' value='529'>
+<input type='hidden' name='Lite_Website_Successful_url' value='http://localhost/vml4/public/orders/75/iverilite/Success'>
+<input type='hidden' name='Lite_Website_Fail_url' value='http://localhost/vml4/public/orders/75/iverilite/Fail'>
+<input type='hidden' name='Lite_Website_TryLater_url' value='http://localhost/vml4/public/orders/75/iverilite/TryLater'>
+<input type='hidden' name='Lite_Website_Error_url' value='http://localhost/vml4/public/orders/75/iverilite/Error'>
+					
+
+</form>
+
+<!-- 25 input objects -->
+
+<input class="btn btn-info" style="
+ border-radius: 4px; 
+ -webkit-border-radius: 5px; 
+ -moz-border-radius: 4px; 
+ padding: 4pt 12pt;
+ font-size: 14px;
+ margin-top: 20px;" type="submit" value="Submit">	
+

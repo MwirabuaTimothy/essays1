@@ -1,0 +1,514 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <meta name="description" content=" " />
+    <meta name="keywords" content=" " />
+
+    <title></title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="./css/ember-animated-outlet.css" />
+    <link rel="stylesheet" href="./css/ratchet.css" /><!-- Ratchet App CSS -->
+    <link rel="stylesheet" href="./css/dropzone.css" />
+    <link rel="stylesheet" href="./css/general.css" /><!-- come after to over-write Ratchet -->
+    <link rel="stylesheet" href="./js/todc-select/select2.css" />
+
+    <!-- App UI/UX flow helpers -->
+    <style></style>
+
+</head>
+
+<body>
+
+    <div class="notificationbar" data-bind="visible: allisvalid">
+        <p>Please ensure that you have all the field with the correct information!</p>
+    </div>
+
+    <script type="text/x-handlebars">
+        <div class="app-content">
+            <table class="nav">
+                <tr>
+                    <td class="nav-side-bar">
+                        <div class="nav-bar">
+                            <ul>
+                                <li {{action introduction}}>Home</li>
+                                <li {{action aboutus}}>About Us</li>
+                                <li {{action ourservices}}>Our Services</li>
+                                <li class="blue-bg white small-padding" {{action myorder}}>Order Now</li>
+                                <li>FAQS</li>
+                                <li {{action contactus}}>Contact Us</li>
+                            </ul>
+                        </div>
+                        <div class="user-login">
+                            <br />
+                            <h5>Welcome Back. <span style="color: dodgerblue">Sign In.</span></h5>
+                            <form class="content-padded">
+                                <div class="input-group">
+                                    <input type="email" data-bind="value: sidebarEmailAddress" placeholder="Email Address">
+                                    <input type="password" data-bind="value: sidebarPassword" placeholder="Password">
+                                </div>
+                                <a class="button-block button-main">Log In</a>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="template-engine">
+                        {{animatedOutlet name="main"}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="services">
+        <div class="services">
+            <div class="span6">
+                <h3>Resume Services</h3>
+                <ul>
+                    <li>Resume Writing</li>
+                    <li>Resume Editing</li>
+                    <li>CV Writing</li>
+                    <li>CV Editing</li>
+                    <li>Cover Letter</li>
+                </ul>
+            </div>
+            <div class="span6">
+                <h3> Essay Services</h3>
+                <ul>
+                    <li>Custom Essay</li>
+                    <li>Term Paper</li>
+                    <li>Research Summary</li>
+                    <li>Book Report/Review, Movie Review</li>
+                    <li>Coursework</li>
+                    <li>Case Study</li>
+                    <li>Lab Report</li>
+                    <li>Speech/Presentation</li>
+                    <li>Articles</li>
+                    <li>Article Critique</li>
+                    <li>Annotated Bibliography</li>
+                    <li>Reaction Paper</li>
+                </ul>
+            </div>
+            <div class="span6">
+                <h3>Dissertation &amp; Thesis Services</h3>
+                <ul>
+                    <li>Dissertation</li>
+                    <li>Any dissertation chapter</li>
+                    <li>
+                        <ul>
+                            <li>Abstract</li>
+                            <li>Introduction Chapter</li>
+                            <li>Literature Review</li>
+                            <li>Methodology</li>
+                            <li>Results</li>
+                            <li>Discussion</li>
+                        </ul>
+                    </li>
+                    <li>Thesis</li>
+                    <li>Thesis/Dissertation Proposal</li>
+                    <li>Research Proposal</li>
+                    <li>Editing</li>
+                    <li>Proofreading</li>
+                </ul>
+            </div>
+            <div class="span6">
+                <h3>Admission Services</h3>
+                <ul>
+                    <li>Admission Essay</li>
+                    <li>Scholarship Essay</li>
+                    <li>Personal Statement</li>
+                    <li>Editing</li>
+                </ul>
+            </div>
+            <div class="span6">
+                <h3>Editing Services</h3>
+                <ul>
+                    <li>Editing</li>
+                    <li>Proofreading</li>
+                    <li>Formatting</li>
+                </ul>
+            </div>
+            <div class="span6">
+                <h3>Assignments</h3>
+                <ul>
+                    <li>Programming</li>
+                    <li>Power Point Presentation</li>
+                    <li>Math/Physics/Econ/Statistics Problems</li>
+                    <li>Multiple Choice Questions</li>
+                    <li>Statistics Project</li>
+                    <li>Research Summary</li>
+                </ul>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="introduction">
+        <div class="intro">
+            <div class="intro-content">
+                <h2>Hi, we are the new kids on the block!</h2>
+                <p>...and we are happy to do any kind of writting for you.</p>
+                <br />
+                <h3 class="blue-bg white small-padding">Make an order now?!</h3>
+            </div>
+            <img src="images/PIC-001.jpg">
+        </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="about-us">
+        <div class="introduction">
+            <div class="padding">
+                <h2>Will tell you who we are and why we are the best.</h2>
+                <p>We are a company specializing in providing excellent writing services to people across the globe.</p>
+
+                <p>Need an excellent writing service? then you are home. We have qualified and experienced team of writers who just cant wait to get a hand on your project. They are not only enthusiastic about custim writing but have the desire to give others knowledge and wisdom contained in the custom writing services.</p>
+
+                <p>Why are we the best? because we care about you being the best in you school. Because of our intregrity, because of our character, assuring you of recieving non-plagiarized work in time, not delays, not a single second. And lastly because we are reasonable in our prices.</p>
+
+                <p>Do you have a writing project? Make an order now.</p>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="my-order">
+    <div class="myorder">
+        <h1>Order Form</h1>
+        <form>
+        <h4>Title or Topic</h4>
+        <input data-part="order" data-type="input" data-bind="value: title"
+               id="ordertitle" type="text" placeholder="eg. Knight in Glaring Darkness">
+        <table>
+        <tr>
+        <td>
+            <div class="options">
+                <h4>Type of Subject: </h4>
+                <select data-part="order" data-type="select" name="subject area" id="subject" title="Subject area">
+                    <optgroup label="Art">
+                        <option value="12">Architecture</option>
+                        <option value="15">Dance</option>
+                        <option value="17">Design Analysis</option>
+                        <option value="13">Drama</option>
+                        <option value="16">Movies</option>
+                        <option value="18">Music</option>
+                        <option value="11">Paintings</option>
+                        <option value="14">Theatre</option>
+                    </optgroup>
+
+                    <option value="112">Biology</option>
+                    <option value="52">Business</option>
+                    <option value="111">Chemistry</option>
+
+                    <optgroup label="Communications and Media">
+                        <option value="105">Advertising</option>
+                        <option value="107">Communication Strategies</option>
+                        <option value="103">Journalism</option>
+                        <option value="104">Public Relations</option>
+                        <option value="115">Creative writing</option>
+                    </optgroup>
+
+                    <optgroup label="Economics">
+                        <option value="60">Accounting</option>
+                        <option value="61">Case Study</option>
+                        <option value="58">Company Analysis</option>
+                        <option value="62">E-Commerce</option>
+                        <option value="59">Finance</option>
+                        <option value="57">Investment</option>
+                        <option value="63">Logistics</option>
+                        <option value="64">Trade</option>
+                    </optgroup>
+
+                    <optgroup label="Education">
+                        <option value="93">Application Essay</option>
+                        <option value="89">Education Theories</option>
+                        <option value="88">Pedagogy</option>
+                        <option value="90">Teacher's Career</option>
+                    </optgroup>
+
+                    <option value="67">Engineering</option>
+                    <option value="9">English</option>
+                    <option value="24">Ethics</option>
+
+                    <optgroup label="History">
+                        <option value="38">African-American Studies</option>
+                        <option value="37">American History</option>
+                        <option value="42">Asian Studies</option>
+                        <option value="41">Canadian Studies</option>
+                        <option value="44">East European Studies</option>
+                        <option value="45">Holocaust</option>
+                        <option value="40">Latin-American Studies</option>
+                        <option value="39">Native-American Studies</option>
+                        <option value="43">West European Studies</option>
+                    </optgroup>
+
+                    <optgroup label="Law">
+                        <option value="49">Criminology</option>
+                        <option value="48">Legal Issues</option>
+                    </optgroup>
+
+                    <option value="7">Linguistics</option>
+
+                    <optgroup label="Literature">
+                        <option value="4">American Literature</option>
+                        <option value="5">Antique Literature</option>
+                        <option value="6">Asian Literature</option>
+                        <option value="3">English Literature</option>
+                        <option value="116">Shakespeare Studies</option>
+                    </optgroup>
+
+                    <option value="54">Management</option>
+                    <option value="56">Marketing</option>
+                    <option value="51">Mathematics</option>
+
+                    <optgroup label="Medicine and Health">
+                        <option value="99">Alternative Medicine</option>
+                        <option value="97">Healthcare</option>
+                        <option value="101">Nursing</option>
+                        <option value="95">Nutrition</option>
+                        <option value="100">Pharmacology</option>
+                        <option value="96">Sport</option>
+                    </optgroup>
+
+                    <optgroup label="Nature">
+                        <option value="85">Agricultural Studies</option>
+                        <option value="113">Anthropology</option>
+                        <option value="86">Astronomy</option>
+                        <option value="83">Environmental Issues</option>
+                        <option value="79">Geography</option>
+                        <option value="80">Geology</option>
+                    </optgroup>
+
+                    <option value="28">Philosophy</option>
+                    <option value="110">Physics</option>
+                    <option value="29">Political Science</option>
+                    <option value="21">Psychology</option>
+                    <option value="108">Religion and Theology</option>
+                    <option value="22">Sociology</option>
+
+                    <optgroup label="Technology">
+                        <option value="71">Aeronautics</option>
+                        <option value="70">Aviation</option>
+                        <option value="72">Computer Science</option>
+                        <option value="73">Internet</option>
+                        <option value="75">IT Management</option>
+                        <option value="77">Web Design</option>
+                    </optgroup>
+
+                    <option value="114">Tourism</option>
+                </select>
+            </div>
+            <div class="options">
+                <h4>Type of Document</h4>
+                <select data-part="order" data-type="select" name="document" id="document" title="type of document">
+                    <option value="1">Essay</option>
+                    <option value="2">Term Paper</option>
+                    <option value="3">Research Paper</option>
+                    <option value="4">Coursework</option>
+                    <option value="5">Book Report</option>
+                    <option value="6">Book Review</option>
+                    <option value="7">Movie Review</option>
+                    <option value="8">Dissertation</option>
+                    <option value="9">Thesis</option>
+                    <option value="10">Thesis Proposal</option>
+                    <option value="11">Research Proposal</option>
+                    <option value="12">Dissertation Chapter - Abstract</option>
+                    <option value="13">Dissertation Chapter - Introduction Chapter</option>
+                    <option value="14">Dissertation Chapter - Literature Review</option>
+                    <option value="15">Dissertation Chapter - Methodology</option>
+                    <option value="16">Dissertation Chapter - Results</option>
+                    <option value="17">Dissertation Chapter - Discussion</option>
+                    <option value="18">Dissertation Services - Editing</option>
+                    <option value="19">Dissertation Services - Proofreading</option>
+                    <option value="20">Formatting</option>
+                    <option value="21">Admission Services - Admission Essay</option>
+                    <option value="22">Admission Services - Scholarship Essay</option>
+                    <option value="23">Admission Services - Personal Statement</option>
+                    <option value="24">Admission Services - Editing</option>
+                    <option value="25">Editing</option>
+                    <option value="26">Proofreading</option>
+                    <option value="27">Case Study</option>
+                    <option value="28">Lab Report</option>
+                    <option value="29">Speech Presentation</option>
+                    <option value="30">Math Problem</option>
+                    <option value="31">Article</option>
+                    <option value="32">Article Critique</option>
+                    <option value="33">Annotated Bibliography</option>
+                    <option value="34">Reaction Paper</option>
+                    <option value="35">PowerPoint Presentation</option>
+                    <option value="36">Statistics Project</option>
+                    <option value="37">Multiple Choice Questions (None-Time-Framed)</option>
+                    <option value="38">Other (Not listed)</option>
+                </select>
+            </div>
+
+            <div class="options">
+                <h4>Academic level</h4>
+                <select data-part="order" data-type="select" name="academic level" id="academiclvl">
+                    <option value="1">High School</option>
+                    <option value="2">Undergraduate</option>
+                    <option value="3">Master</option>
+                    <option value="4">Ph. D.</option>
+                </select>
+            </div>
+
+            <div class="options">
+                <h4>How soon do you want it?</h4>
+                <select data-part="order" data-type="select" name="urgency" id="urgency" title="Paper urgency">
+                    <option value="15">30 days</option>
+                    <option value="16">6 hours</option>
+                    <option value="6">12 hours</option>
+                    <option value="7">24 hours</option>
+                    <option value="8">48 hours</option>
+                    <option value="9">3 days</option>
+                    <option value="10">4 days</option>
+                    <option value="11">5 days</option>
+                    <option value="12">7 days</option>
+                    <option value="13">10 days</option>
+                    <option value="14">20 days</option>
+                </select>
+            </div>
+
+            <div class="options">
+                <h4>Writting Style: </h4>
+                <select data-part="order" data-type="select" name="writing_style" id="writtingstyle">
+                    <option value="APA">APA</option>
+                    <option value="MLA">MLA</option>
+                    <option value="Turabian">Turabian</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Harvard">Harvard</option>
+                    <option value="Oxford">Oxford</option>
+                    <option value="Vancouver">Vancouver</option>
+                    <option value="CBE">CBE</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="options">
+                <h4>Instructions</h4>
+                <textarea id="instructions" data-part="order" data-type="textarea" rows="5"></textarea>
+            </div>
+        </td>
+        <td>
+            <div class="options">
+                <h4>Prefered language: </h4>
+                <select data-part="order" data-type="select" name="langstyle" id="langstyle">
+                    <option value="English (U.S.)">English (U.S.)</option>
+                    <option value="English (U.K.)">English (U.K.)</option>
+                </select>
+            </div>
+            <div class="options">
+                <h4>Total pages required or word:</h4>
+                <input id="pgwdnumber" data-bind="value: pagesorwords" data-part="order" data-type="input" type="text" placeholder="eg. 12 or 2673">
+            </div>
+            <div class="options">
+                <h4>Pages or words</h4>
+                <select data-part="order" data-type="select" name="pages and words" id="pgorwords">
+                    <option value="words">Words</option>
+                    <option value="pages">Pages</option>
+                </select>
+            </div>
+            <div class="options">
+                <h4>Choise of currency</h4>
+                <select data-part="order" data-type="select" name="currency" id="currency">
+                    <option value="dollars">Dollars</option>
+                    <option value="pounds">Sterling Pounds</option>
+                </select>
+            </div>
+            <div class="options">
+                <h4>Total:</h4>
+                <div class="totalcost">
+                    <h1><span id="key">$</span><span id="tcost">10.10</span></h1>
+                </div>
+                <br />
+                <hr />
+                <a id="submitAttach"
+                   class="button-block button-positive">Upload Attachments &amp; Submit</a>
+            </div>
+        </td>
+        </tr>
+        </table>
+        </form>
+
+        <div class="uploadAttachment">
+            <div class="dropithere">
+                <h3>Attach any required files</h3>
+                <form action="./orders"
+                      class="dropzone dz-clickable" id="my-dropzone">
+                    <div class="dz-default dz-message">
+                        <span>Click here or drag and drop files here to upload</span>
+                    </div>
+                </form>
+                <br />
+                <a id="submitOrder"
+                   data-processing="Uploading files..."
+                   data-complete="Order submitted successfully."
+                   class="button-block button-main">Submit Order</a>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+    </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="contact-us">
+        <div class="contact-us">
+            <h1 class="white small-padding align-center">Write to us:</h1>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Full names">
+                    <input type="text" placeholder="Email address">
+                    <textarea rows="6" placeholder="So tell us something interesting..."></textarea>
+                    <a class="button-block button-main">Send Message</a>
+                </form>
+            </div>
+        </div>
+    </script>
+
+    <!-- basic necessities -->
+    <script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./js/ratchet.min.js"></script>
+
+    <!-- Its an Ember Application -->
+    <script type="text/javascript" src="./js/libs/handlebars.min.js"></script>
+    <script type="text/javascript" src="./js/libs/ember.min.js"></script>
+    <script type="text/javascript" src="./js/libs/ember-animated-outlet.js"></script>
+
+    <!-- top dependencies -->
+    <script type="text/javascript" src="./js/knockout-2.2.1.js"></script>
+    <script type="text/javascript" src="./js/knockout.validation.js"></script>
+
+    <script type="text/javascript" src="./js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="./js/todc-select/select2.min.js"></script>
+
+    <!-- Takes care of file uploads -->
+    <script type="text/javascript" src="./js/dropzone.min.js"></script>
+
+    <!-- Apps initialisation requirements -->
+    <script type="text/javascript" src="./js/application.js"></script>
+    <script type="text/javascript">
+        //make this global
+        Dropzone.autoDiscover = false; //disable autodiscovery of formfield for uploading files
+        $(function() {
+            //Instantiate KO order input bindings
+            ko.applyBindings(sideBarModel, document.querySelector('.user-login'));
+
+            $('.nav').css('height', window.innerHeight);
+            $('.services div').css('width', function() {
+                //$(this).height(window.innerHeight/3)
+                var width = $('.template-engine').width()/($(this).parent().children().length);
+                //$(this).parent().masonry({columnWidth: width, itemSelector: '.span6'})
+                return width;
+            })
+
+            //Mozilla and other height correction for myorder page
+            $('.myorder').height(window.innerHeight);
+        })
+    </script>
+</body>
+</html>

@@ -14,6 +14,8 @@ return array(
 	*/
 
 	'app' => __DIR__.'/../app',
+	// 'app' => __DIR__.'/../../vitumob/app',
+	// 'app' => './vitumob/app',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -27,6 +29,8 @@ return array(
 	*/
 
 	'public' => __DIR__.'/../public',
+	// 'public' => __DIR__,
+	// 'public' => './',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -40,6 +44,8 @@ return array(
 	*/
 
 	'base' => __DIR__.'/..',
+	// 'base' => __DIR__.'/../../vitumob',
+	// 'base' => './vitumob',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -53,5 +59,7 @@ return array(
 	*/
 
 	'storage' => __DIR__.'/../app/storage',
+	// 'storage' => __DIR__.'/../../vitumob/app/storage',
+	// 'storage' => './vitumob/app/storage',
 
 );

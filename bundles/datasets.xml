@@ -1,0 +1,488 @@
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEAjM5eDR8vvvpwkz8b+p+HjqeA2NlNquObGPLCbsfLYhDUIDMfGxF3mcbZO9jr
+645DARgZTki3sF77gSQBwAuxk6B6d+FY7oJqddle+wnl5a4N+m0b9/xuvM14w2AIJ2d12klUJ63s
+DAs0qmeecudxTtTvDjvN8ZJYCAwaJEeZ/zSLL3wY9X4SRMtqW/ncM4yJDGvLqnSmTrXzlBSfgB3y
+fk7NYQ6un26ryZa/Ao6GTcenLd/S5mBdOD1M63vwB8r8T02gDBU84spDHm+ZdSOXR0qbn5G1Izak
+S5mBdOD1M63vwB8r8T02gDBU84spDHm+ZdSOXR0qbn5G1IzakjbiQCHchQixzckloodj89pTXP_n
+vA/rwF8xz085t3vLF3GCMqcdEBXds26YrI9sU64RwMmFfLFfpn5NcwIDAQABAoIBAQCHchQixzck
+nMAhxHljkoXRget9rTr7Acq2Kv9BlUtdYBbNip+HaDwGXrOk0DvQ8Z4etVHSbjzUmemRBlPwqs78
+1Ug5fToQ5L8H8jtdfN37HH0xwjc/S0Iyt+xM9FmjnfBONG+RY8pGo5jbuqU+nsfuLwJuTLUEhePM
+ieezsnS+ehGNiMYve2aTkRxUu+0pOAHzD1o5zWVDsNmZ9DIY7DzoXVdol6CZzAM7LJtloqNbgLYx
+omPcvULqVaUttyxlO3Z3g/qhR52ikK+tA0L3XAdspm6FKMj/ZJb2QDESx5BjheMlDxhwMlMhhB1m
+exhYMoWTLhQYchL3OXXhIDMQUZIxAoGBAPUn1DXKY+v+UTKgoKQCRfhWZnjlEmhMTP/hrcQ4kZeq
+hIrLK7eOJfVb3DOOM86tRWPGMTWBO1eGHrXbwY68gFQ30C0vjLy8fEHzOGzaUUfrEviRaMntG7hM
++UZev3U8XXgGq0M7q/SU+TM61HkZh3N4o7aZ9ATIBMDjFtFDd3tlAoGBAJMI32pqc7rtt9H6MTJj
+l5blM6r7mtp1e+kaZCTMrPjBxG4DBSCxYc3YrqsvO0ZQdEmNN7V+zeETx3KXDmvuhP68n8UUQRmj
+cMe30glSeHU4YJ8qr4RVrvp027PRSv/hk4cGVW8hlOQ3hWx1O2uWrumZjjN4OcGyHgs9MjnKWtP3
+AoGBAOm2dLprHeNHagVH2J1ChY4AYGR0jZ3cz7NJZK0h+LqMFxtyIVU2ML2+OyjzMjSgPvylXxhR
+AU+pTvG0dMwsrHKdWtsY76SmVBdTVcGAR+i2FDnf9fQ7FSgYSbRqcz/CsqDQSsknxADBXOkX9qMU
+UWsl4X0dO+KrBM0WMRSCqw95AoGAbLlZ42m2DBquG6HC8Ty9okH3085bMoE/UB5IwQFsQkGeC69G
+AmfIJ5u7hS/Wx+bEJoM7F4UdnfqvN+fFLUBhrbAzAFs6zEeUJMqjkGsgUaWPpQK+aL+nNOJmd3Ai
+4lWebnDbieKuI5d+nLWPa74vtuLqSNr08mrQVoU494zPXv8CgYEAuOLtBE5mSv91hLqSr2TBFkDu
+oxD1m2IRAY2PwPF4xE/oFvAPRKDe0hJpdUkCIDRiyCieC+
+-----END RSA PRIVATE KEY-----
+
+// payment details -> db
+// $payment["payment_type"] = $input["payment_type"];
+// $payment["payment_type"] = $input["payment_type"];
+// $payment["payment_type"] = $input["payment_type"];
+// $payment["payment_type"] = $input["payment_type"];
+// $payment["submitorder"] = $input["submitorder"];
+
+// $payment["Lite_Merchant_ApplicationID"] = $in00put["Lite_Merchant_ApplicationID"];
+// $payment["Ecom_BillTo_Postal_Name_First"] = $input["Ecom_BillTo_Postal_Name_First"];
+// $payment["Ecom_BillTo_Postal_Name_Last"] = $input["Ecom_BillTo_Postal_Name_Last"];
+// $payment["Ecom_BillTo_Telecom_Phone_Number"] = $input["Ecom_BillTo_Telecom_Phone_Number"];
+// $payment["Ecom_BillTo_Online_Email"] = $input["Ecom_BillTo_Online_Email"];
+// $payment["Lite_Order_Amount"] = $input["Lite_Order_Amount"];
+// $payment["Lite_Order_Terminal"] = $input["Lite_Order_Terminal"];
+// $payment["Lite_ConsumerOrderID_PreFix"] = 'order';
+// $payment["Lite_On_Error_Resume_Next"] = $input["Lite_On_Error_Resume_Next"];
+// $payment["Lite_Order_LineItems_Product_1"] = $input["Lite_Order_LineItems_Product_1"];
+// $payment["Lite_Order_LineItems_Quantity_1"] = $input["Lite_Order_LineItems_Quantity_1"];
+// $payment["Lite_Order_LineItems_Amount_1"] = $input["Lite_Order_LineItems_Amount_1"];
+// $payment["Ecom_Payment_Card_Protocols"] = $input["Ecom_Payment_Card_Protocols"];
+// $payment["Lite_Version_"] = $input["Lite_Version_"];
+// $payment["Ecom_ConsumerOrderID"] = $order_id;
+// $payment["Ecom_TransactionComplete"] = $input["Ecom_TransactionComplete"];
+// $payment["Lite_Website_Successful_url"] = $input["Lite_Website_Successful_url"];
+// $payment["Lite_Website_Fail_url"] = $input["Lite_Website_Fail_url"];
+// $payment["Lite_Website_TryLater_url"] = $input["Lite_Website_TryLater_url"];
+// $payment["Lite_Website_Error_url"] = $input["Lite_Website_Error_url"];
+
+
+
+https://backoffice.host.iveri.com/Lite/Transactions/New/Authorise.aspx
+?Lite_Order_Amount=894.8726
+&Lite_ConsumerOrderID_PreFix=54
+&Ecom_BillTo_Postal_Name_First=tim
+&Ecom_BillTo_Postal_Name_Last=k
+&Ecom_ShipTo_Online_Email=techytimo%40gmail.com
+&Ecom_ShipTo_Telecom_Phone_Number=0734567089
+&Ecom_ShipTo_Postal_City=Nairobi
+&Ecom_Payment_Card_Type=unspecified
+&Ecom_Payment_Card_Number=42424242424242
+&Ecom_Payment_Card_ExpDate_Month=03
+&Ecom_Payment_Card_ExpDate_Year=2016
+&Lite_Order_LineItems_Product_1=Playskool+Busy+Basics+Step+Start+Walk+%27n+Ride
+&Lite_Order_LineItems_Quantity_1=15
+&Lite_Order_LineItems_Amount_1=19.99
+&Lite_Order_LineItems_Product_2=All+Blacks+12%2F13+Performance+T-Shirt+%28Black%29
+&Lite_Order_LineItems_Quantity_2=2
+&Lite_Order_LineItems_Amount_2=45.97
+&Lite_Website_Successful_url=https%3A%2F%2Fvitumob.com%2Fiverilite/%2Fsuccess
+&Lite_Website_Fail_url=https%3A%2F%2Fvitumob.com%2Fiverilite/%2Ffail
+&Lite_Website_TryLater_url=https%3A%2F%2Fvitumob.com%2Fiverilite/%2Ftrylater
+&Lite_Website_Error_url=https%3A%2F%2Fvitumob.com%2Fiverilite/%2Ferror
+
+http://www.vitumob.thedevs.org/mpesa
+?id=2970
+&orig=MPESA
+&dest=254700733153
+&tstamp=2011-07-06 22:48:56.0
+&text=BM46ST941 Confirmed.on 6/7/11 ...New balance is Ksh6,375,223.00
+&customer_id=2
+&user=123
+&pass=123
+&routemethod_id=2
+&routemethod_name=HTTP
+&mpesa_code=BM46ST941
+&mpesa_acc=5FML59-01
+&mpesa_msisdn=254722291067
+&mpesa_trx_date=6/7/11
+&mpesa_trx_time=10:49 PM
+&mpesa_amt=8723.0
+&mpesa_sender=RONALD NDALO
+
+
+array(18) {
+  ["Lite_Order_Amount"] = string(8) "649.6626"
+  ["Lite_ConsumerOrderID_PreFix"] = int(103)
+  ["Ecom_BillTo_Postal_Name_First"] = string(3) "tim"
+  ["Ecom_BillTo_Postal_Name_Last"] = string(1) "k"
+  ["Ecom_ShipTo_Online_Email"] = string(19) "techytimo@gmail.com"
+  ["Ecom_ShipTo_Telecom_Phone_Number"] = string(10) "0734567089"
+  ["Ecom_ShipTo_Postal_City"] = string(7) "Nairobi"
+  ["Ecom_Payment_Card_Type"] = string(11) "unspecified"
+  ["Ecom_Payment_Card_Number"] = string(14) "42424242424242"
+  ["Ecom_Payment_Card_ExpDate_Month"] = string(2) "02"
+  ["Ecom_Payment_Card_ExpDate_Year"] = string(4) "2015"
+  ["Lite_Order_LineItems_Product_1"] = string(45) "Playskool Busy Basics Step Start Walk 'n Ride"
+  ["Lite_Order_LineItems_Quantity_1"] = string(2) "15"
+  ["Lite_Order_LineItems_Amount_1"] = string(5) "19.99"
+  ["Lite_Website_Successful_url"] = string(37) "https://vitumob.thedevs.org/order/103"
+  ["Lite_Website_Fail_url"] = string(41) "https://vitumob.thedevs.org/checkout/fail"
+  ["Lite_Website_TryLater_url"] = string(45) "https://vitumob.thedevs.org/checkout/trylater"
+  ["Lite_Website_Error_url"] = string(42) "https://vitumob.thedevs.org/checkout/error"
+}
+{
+	"Lite_Order_Amount":"1055.9751",
+	"Lite_ConsumerOrderID_PreFix":106,
+	"Ecom_BillTo_Postal_Name_First":"tim",
+	"Ecom_BillTo_Postal_Name_Last":"k",
+	"Ecom_ShipTo_Online_Email":"techytimo@gmail.com",
+	"Ecom_ShipTo_Telecom_Phone_Number":"0734567089",
+	"Ecom_ShipTo_Postal_City":"Nairobi",
+	"Ecom_Payment_Card_Type":"unspecified",
+	"Ecom_Payment_Card_Number":"42424242424242",
+	"Ecom_Payment_Card_ExpDate_Month":"01",
+	"Ecom_Payment_Card_ExpDate_Year":"2015",
+	"Lite_Order_LineItems_Product_1":"All Blacks 12\/13 Training SS Rugby Jersey",
+	"Lite_Order_LineItems_Quantity_1":"10",
+	"Lite_Order_LineItems_Amount_1":"63.97",
+	"Lite_Website_Successful_url":"https:\/\/vitumob.thedevs.org\/order\/106",
+	"Lite_Website_Fail_url":"https:\/\/vitumob.thedevs.org\/checkout\/fail",
+	"Lite_Website_TryLater_url":"https:\/\/vitumob.thedevs.org\/checkout\/trylater",
+	"Lite_Website_Error_url":"https:\/\/vitumob.thedevs.org\/checkout\/error"
+}
+https://backoffice.host.iveri.com/Common/Information.aspx?PageTitle=iVeri&PageHeading=Requesting+authorisation&ErrorMessage=Invalid%20Return%20URL%20specified:
+
+
+extension post from amazon:
+---------------------------
+
+//print_r(Input::all());
+
+Array ( 
+	[bundle] => 
+		{
+		"items":[
+			{
+				"id":"B00310K9VQ",
+				"quantity":3,
+				"price":13.66
+			}
+		],
+		"host":"amazon.com"
+		} 
+	[extension] => chrome - 31.0.1630.0 
+) 
+
+//var_dump(Input::all());
+
+array(2) 
+{ 
+	["bundle"]=> string(2350) 
+		"{
+			"items":[
+				{
+					"id":"B00310K9VQ",
+					"quantity":3,
+					"price":13.66
+				}
+			],
+			"host":"amazon.com"
+		}" 
+	["extension"]=> string(20) "chrome - 31.0.1630.0" 
+} 
+
+
+
+
+
+Generation Y'ers are not aware of the happiness formula, which goes something like: Your Happiness = The Reality Of Things – What You Expected. 
+
+https://backoffice.host.iveri.com/Common/Information.aspx?PageTitle=iVeri&PageHeading=Requesting+authorisation&ErrorMessage=Invalid%20Return%20URL%20specified:
+
+[blocked] The page at 'https://backoffice.host.iveri.com/Common/Information.aspx?PageTitle=iVeri&P…g=Requesting+authorisation&ErrorMessage=Invalid%20Return%20URL%20specified:' was loaded over HTTPS, but ran insecure content from 'http://resources.crossrider.com/apps/39380/resources/meta/0?r=0.7861991815734655': this content should also be loaded over HTTPS.
+
+For them its a shortcut for money, wealth or power but for me I just always wanna be on the right side of history
+
+
+https://www.vitumob.com/mpesa?
+id=3
+&orig=MPESA
+&dest=254700733153
+&tstamp=2011-07-06 22:48:56.0
+&text=BM46ST941 Confirmed.on 6/7/11 ...New balance is Ksh6,375,223.00
+&customer_id=2
+&user=123
+&pass=123
+&routemethod_id=2
+&routemethod_name=HTTP
+&mpesa_code=BM46ST941
+&mpesa_acc=5FML59-01
+&mpesa_msisdn=254711451409
+&mpesa_trx_date=6/7/11
+&mpesa_trx_time=10:49 PM
+&mpesa_amt=0
+&mpesa_sender=TIM
+
+
+Array ( [bundle] => {"items":[{"id":"B00310K9VQ","quantity":3,"price":13.66,"image":"http://ecx.images-amazon.com/images/I/419XxNWTRnL._SL500_SS100_.jpg","name":"StarTech MDP2DVI Mini DisplayPort to DVI Video Adapter Converter","link":"http://www.amazon.com/gp/product/B00310K9VQ/ref=ox_sc_act_title_1?ie=UTF8&psc=1&smid=ATVPDKIKX0DER","creator":"STARTECH.COM","id2":"C30YMN49R0JR1Q"},{"id":"B00917TBX0","quantity":2,"price":18.99,"image":"http://ecx.images-amazon.com/images/I/411MPBDacqL._SL500_SS100_.jpg","name":"DATASTREAM Gold Plated Mini DisplayPort to HDMI Adapter up to 1080p Resolution for Microsoft Surface Pro Tablet , Toshiba , Dell , Lenovo , HP & More Laptops! ** Accessory Bag Included **","link":"http://www.amazon.com/gp/product/B00917TBX0/ref=ox_sc_act_title_2?ie=UTF8&psc=1&smid=A2QHBM8MEN9W65","creator":"Accessory Genie","id2":"C3TXPED34K52CW"},{"id":"B00C7AQXQQ","quantity":1,"price":29.99,"image":"http://ecx.images-amazon.com/images/I/31Nk9b-xOWL._SL500_SS100_.jpg","name":"Juiced Systems Microsoft Surface 5 in 1 Adapter - USB Host, Micro USB, SD/SDHC/MMC4.0, Micro SD/SDHC","link":"http://www.amazon.com/gp/product/B00C7AQXQQ/ref=ox_sc_act_title_3?ie=UTF8&psc=1&smid=A24Y22QERZZ9SS","creator":"Juiced Systems®","id2":"C2Q2KFD1NELS7G"},{"id":"B00BWI8858","quantity":1,"price":16.38,"image":"http://ecx.images-amazon.com/images/I/41P6dTjz%2BQL._SL500_SS100_.jpg","name":"Incipio Clear/Anti-Finger Print Screen Protector for Microsoft Surface Pro, 2 Pack (CL-487)","link":"http://www.amazon.com/gp/product/B00BWI8858/ref=ox_sc_act_title_4?ie=UTF8&psc=1&smid=ATVPDKIKX0DER","creator":"Incipio","id2":"C1DT5BYB8D31FG"},{"id":"B005QX7KYU","quantity":1,"price":1.5,"image":"http://ecx.images-amazon.com/images/I/41gqWWmZ0FL._SL500_SS100_.jpg","name":"sanoxy Micro USB OTG to USB 2.0 Adapter","link":"http://www.amazon.com/gp/product/B005QX7KYU/ref=ox_sc_act_title_5?ie=UTF8&psc=1&smid=A1XTNY8OCSPFGO","creator":"eForCity","id2":"C136QVFPW84YC"},{"id":"B00BEVW53E","quantity":1,"price":900,"image":"http://ecx.images-amazon.com/images/I/41%2BemeqesdL._SL500_SS100_.jpg","name":"Microsoft Surface Pro 128GB SSD Core i5 Digitizer Pen 10.6\" 1080P 1920x1080 Dual Camera MicroSD","link":"http://www.amazon.com/gp/product/B00BEVW53E/ref=ox_sc_act_title_6?ie=UTF8&psc=1&smid=A2NRA1VO2B7B2X","creator":"Microsoft","id2":"CKMGTIOYIQ511"}],"host":"amazon.com"} [extension] => chrome - 31.0.1630.0 ) array(1) { ["items"]=> NULL }
+
+
+array(18) { 
+
+["Lite_Order_Amount"]=> string(6) "160.21" 
+["Lite_ConsumerOrderID_PreFix"]=> int(78) 
+["Ecom_BillTo_Postal_Name_First"]=> string(3) "tim" 
+["Ecom_BillTo_Postal_Name_Last"]=> string(1) "k" 
+["Ecom_ShipTo_Online_Email"]=> string(19) "techytimo@gmail.com" 
+["Ecom_ShipTo_Telecom_Phone_Number"]=> string(10) "0734567089" 
+["Ecom_ShipTo_Postal_City"]=> string(7) "Nairobi" 
+["Ecom_Payment_Card_Type"]=> string(11) "unspecified" 
+["Ecom_Payment_Card_Number"]=> string(14) "42424242424242" 
+["Ecom_Payment_Card_ExpDate_Month"]=> string(2) "01" 
+["Ecom_Payment_Card_ExpDate_Year"]=> string(4) "2014" 
+["Lite_Order_LineItems_Product_1"]=> string(41) "All Blacks 12/13 Training SS Rugby Jersey" 
+["Lite_Order_LineItems_Quantity_1"]=> int(10) 
+["Lite_Order_LineItems_Amount_1"]=> string(5) "63.97" 
+["Lite_Website_Successful_url"]=> string(42) "http://localhost/vml4/public/beta/order/78" 
+["Lite_Website_Fail_url"]=> string(48) "http://localhost/vml4/public/beta/iverilite/fail" 
+["Lite_Website_TryLater_url"]=> string(52) "http://localhost/vml4/public/beta/iverilite/trylater" 
+["Lite_Website_Error_url"]=> string(49) "http://localhost/vml4/public/beta/iverilite/error" 
+
+}
+array(21) { 
+
+["Lite_Order_Amount"]=> string(9) "4309.3500" 
+["Lite_ConsumerOrderID_PreFix"]=> int(40) 
+["Ecom_BillTo_Postal_Name_First"]=> string(3) "tim" 
+["Ecom_BillTo_Postal_Name_Last"]=> string(1) "k" 
+["Ecom_ShipTo_Online_Email"]=> string(19) "techytimo@gmail.com" 
+["Ecom_ShipTo_Telecom_Phone_Number"]=> string(10) "0734567089" 
+["Ecom_ShipTo_Postal_City"]=> string(7) "Nairobi" 
+["Ecom_Payment_Card_Type"]=> string(11) "unspecified" 
+["Ecom_Payment_Card_Number"]=> string(14) "42424242424242" 
+["Ecom_Payment_Card_ExpDate_Month"]=> string(2) "10" 
+["Ecom_Payment_Card_ExpDate_Year"]=> string(4) "2015" 
+["Lite_Order_LineItems_Product_1"]=> string(64) "StarTech MDP2DVI Mini DisplayPort to DVI Video Adapter Converter" 
+["Lite_Order_LineItems_Quantity_1"]=> string(1) "1" 
+["Lite_Order_LineItems_Amount_1"]=> string(5) "13.66" 
+["Lite_Order_LineItems_Product_2"]=> string(95) "Microsoft Surface Pro 128GB SSD Core i5 Digitizer Pen 10.6" 1080P 1920x1080 Dual Camera MicroSD" 
+["Lite_Order_LineItems_Quantity_2"]=> string(1) "4" 
+["Lite_Order_LineItems_Amount_2"]=> string(3) "900" 
+["Lite_Website_Successful_url"]=> string(32) "http://vitumob.com/beta/order/40" 
+["Lite_Website_Fail_url"]=> string(38) "http://vitumob.com/beta/fail" 
+["Lite_Website_TryLater_url"]=> string(42) "http://vitumob.com/beta/trylater" 
+["Lite_Website_Error_url"]=> string(39) "http://vitumob.com/beta/error" 
+
+}
+//post by amazon
+{
+	"items":[
+				{
+					"id":"B00310K9VQ",
+					"quantity":1,
+					"price":13.66,
+					"image":"http://ecx.images-amazon.com/images/I/419XxNWTRnL._SL500_SS100_.jpg",
+					"name":"StarTech MDP2DVI Mini DisplayPort to DVI Video Adapter Converter",
+					"link":"http://www.amazon.com/gp/product/B00310K9VQ/ref=ox_sc_act_title_1?ie=UTF8&psc=1&smid=ATVPDKIKX0DER",
+					"creator":"STARTECH.COM",
+					"id2":"C30YMN49R0JR1Q"
+				},
+					{
+					"id":"B00BEVW53E",
+					"quantity":1,
+					"price":900,
+					"image":"http://ecx.images-amazon.com/images/I/41%2BemeqesdL._SL500_SS100_.jpg",
+					"name":"Microsoft Surface Pro 128GB SSD Core i5 Digitizer Pen 10.6\" 1080P 1920x1080 Dual Camera MicroSD",
+					"link":"http://www.amazon.com/gp/product/B00BEVW53E/ref=ox_sc_act_title_2?ie=UTF8&psc=1&smid=A2NRA1VO2B7B2X",
+					"creator":"Microsoft",
+					"id2":"CKMGTIOYIQ511"
+				}
+			],
+	"host":"amazon.com"
+} 
+
+https://backoffice.host.iveri.com/Lite/Transactions/New/EasyAuthorise.aspx
+?Lite_Order_Amount=1106.8464
+&Lite_ConsumerOrderID_PreFix=42
+&Ecom_BillTo_Postal_Name_First=tim
+&Ecom_BillTo_Postal_Name_Last=k
+&Ecom_ShipTo_Online_Email=techytimo%40gmail.com
+&Ecom_ShipTo_Telecom_Phone_Number=0734567089
+&Ecom_ShipTo_Postal_City=Nairobi
+&Ecom_Payment_Card_Type=unspecified
+&Ecom_Payment_Card_Number=42424242424242
+&Ecom_Payment_Card_ExpDate_Month=10
+&Ecom_Payment_Card_ExpDate_Year=2014
+&Lite_Order_LineItems_Product_1=StarTech+MDP2DVI+Mini+DisplayPort+to+DVI+Video+Adapter+Converter
+&Lite_Order_LineItems_Quantity_1=1
+&Lite_Order_LineItems_Amount_1=13.66
+&Lite_Order_LineItems_Product_2=Microsoft+Surface+Pro+128GB+SSD+Core+i5+Digitizer+Pen+10.6%22+1080P+1920x1080+Dual+Camera+MicroSD
+&Lite_Order_LineItems_Quantity_2=1
+&Lite_Order_LineItems_Amount_2=900
+&Lite_Website_Successful_url=http%3A%2F%2Fvitumob.com%2Fcheckout%2Forder%2F42
+&Lite_Website_Fail_url=http%3A%2F%2Fvitumob.com%2Fcheckout%2Ffail
+&Lite_Website_TryLater_url=http%3A%2F%2Fvitumob.com%2Fcheckout%2Ftrylater
+&Lite_Website_Error_url=http%3A%2F%2Fvitumob.com%2Fcheckout%2Ferror
+
+array(26) { 
+	["Lite_Merchant_ApplicationId"]=> string(36) "981834E7-E051-4D6E-A587-D4FDD32A6F2B" 
+	["Lite_Merchant_Trace"]=> string(0) "" 
+	["Lite_Order_Amount"]=> string(9) "1106.8464" 
+	["Lite_ConsumerOrderID_PreFix"]=> string(3) "INV" 
+	["Ecom_BillTo_Postal_Name_First"]=> string(3) "tim" 
+	["Ecom_BillTo_Postal_Name_Last"]=> string(1) "k" 
+	["Ecom_ShipTo_Online_Email"]=> string(19) "techytimo@gmail.com" 
+	["Ecom_ShipTo_Telecom_Phone_Number"]=> string(10) "0734567089" 
+	["Ecom_ShipTo_Postal_City"]=> string(7) "Nairobi" 
+	["Ecom_Payment_Card_Protocols"]=> string(0) "" 
+	["Ecom_ConsumerOrderID"]=> string(0) "" 
+	["Ecom_TransactionComplete"]=> string(0) "" 
+	["Ecom_Payment_Card_Type"]=> string(11) "unspecified" 
+	["Ecom_Payment_Card_Number"]=> string(14) "42424242424242" 
+	["Ecom_Payment_Card_ExpDate_Month"]=> string(2) "12" 
+	["Ecom_Payment_Card_ExpDate_Year"]=> string(4) "2014" 
+	["Lite_Order_LineItems_Product_1"]=> string(64) "StarTech MDP2DVI Mini DisplayPort to DVI Video Adapter Converter" 
+	["Lite_Order_LineItems_Quantity_1"]=> string(1) "1" 
+	["Lite_Order_LineItems_Amount_1"]=> string(5) "13.66" 
+	["Lite_Order_LineItems_Product_2"]=> string(95) "Microsoft Surface Pro 128GB SSD Core i5 Digitizer Pen 10.6" 1080P 1920x1080 Dual Camera MicroSD" 
+	["Lite_Order_LineItems_Quantity_2"]=> string(1) "1" 
+	["Lite_Order_LineItems_Amount_2"]=> string(3) "900" 
+	["Lite_Website_Successful_url"]=> string(36) "http://vitumob.com/checkout/order/44" 
+	["Lite_Website_Fail_url"]=> string(32) "http://vitumob.com/checkout/fail" 
+	["Lite_Website_TryLater_url"]=> string(36) "http://vitumob.com/checkout/trylater" 
+	["Lite_Website_Error_url"]=> string(33) "http://vitumob.com/checkout/error" 
+}
+
+array(35) { 
+["Lite_Merchant_ApplicationID"]=> string(36) "981834E7-E051-4D6E-A587-D4FDD32A6F2B" 
+["Lite_Order_Amount"]=> string(2) "99" 
+["Lite_Order_Terminal"]=> string(3) "Web" 
+["Lite_Website_TextColor"]=> string(7) "#ffffff" 
+["Lite_Website_BGColor"]=> string(7) "#86001B" 
+["Lite_ConsumerOrderID_PreFix"]=> string(3) "PPP" 
+["Lite_On_Error_Resume_Next"]=> string(4) "True" 
+["Lite_Order_LineItems_Product_1"]=> string(18) "Donation product#1" 
+["Lite_Order_LineItems_Quantity_1"]=> string(1) "1" 
+["Lite_Order_LineItems_Amount_1"]=> string(2) "35" 
+["Lite_Order_LineItems_Product_2"]=> string(18) "Donation product#2" 
+["Lite_Order_LineItems_Quantity_2"]=> string(1) "2" 
+["Lite_Order_LineItems_Amount_2"]=> string(2) "32" 
+["Lite_Website_Successful_url"]=> string(42) "https:://www.vitumob.com/iverilite/Success" 
+["Lite_Website_Fail_url"]=> string(39) "https:://www.vitumob.com/iverilite/Fail" 
+["Lite_Website_TryLater_url"]=> string(43) "https:://www.vitumob.com/iverilite/TryLater" 
+["Lite_Website_Error_url"]=> string(40) "https:://www.vitumob.com/iverilite/Error" 
+["Ecom_BillTo_Postal_Name_Prefix"]=> string(3) "Mr." 
+["Ecom_BillTo_Postal_Name_First"]=> string(4) "John" 
+["Ecom_BillTo_Postal_Name_Last"]=> string(3) "Doe" 
+["Ecom_BillTo_Postal_Name_Suffix"]=> string(5) "iVeri" 
+["Ecom_BillTo_Telecom_Phone_Number"]=> string(7) "4457500" 
+["Ecom_BillTo_Online_Email"]=> string(7) "t@t.com" 
+["Ecom_Payment_Card_Number"]=> string(16) "4242424242424242" 
+["Ecom_Payment_Card_StartDate_Day"]=> string(2) "00" 
+["Ecom_Payment_Card_StartDate_Month"]=> string(2) "07" 
+["Ecom_Payment_Card_StartDate_Year"]=> string(4) "1999" 
+["Ecom_Payment_Card_ExpDate_Day"]=> string(2) "00" 
+["Ecom_Payment_Card_ExpDate_Month"]=> string(2) "07" 
+["Ecom_Payment_Card_ExpDate_Year"]=> string(4) "2001" 
+["Ecom_Payment_Card_Protocols"]=> string(5) "iVeri" 
+["Ecom_ConsumerOrderID"]=> string(12) "AUTOGENERATE" 
+["Ecom_TransactionComplete"]=> string(5) "False" 
+["Lite_Version_"]=> string(3) "2.0" 
+["Authorise"]=> string(9) "Authorise" 
+}
+
+
+https://backoffice.host.iveri.com/Lite/Transactions/New/EasyAuthorise.aspx
+?Lite_Merchant_ApplicationID=981834E7-E051-4D6E-A587-D4FDD32A6F2B
+&Lite_Order_Amount=99
+&Lite_Order_Terminal=Web
+&Lite_Order_BudgetPeriod=0
+&Lite_Website_TextColor=%23ffffff
+&Lite_Website_BGColor=%2386001B
+&Lite_ConsumerOrderID_PreFix=PPP
+&Lite_On_Error_Resume_Next=True
+&Lite_Order_LineItems_Product_1=Donation+product%231
+&Lite_Order_LineItems_Quantity_1=1
+&Lite_Order_LineItems_Amount_1=35
+&Lite_Order_LineItems_Product_2=Donation+product%232
+&Lite_Order_LineItems_Quantity_2=2
+&Lite_Order_LineItems_Amount_2=32
+&Lite_Website_Successful_url=https%3A%3A%2F%2Fwww.vitumob.com%2Fiverilite%2FSuccess
+&Lite_Website_Fail_url=https%3A%3A%2F%2Fwww.vitumob.com%2Fiverilite%2FFail
+&Lite_Website_TryLater_url=https%3A%3A%2F%2Fwww.vitumob.com%2Fiverilite%2FTryLater
+&Lite_Website_Error_url=https%3A%3A%2F%2Fwww.vitumob.com%2Fiverilite%2FError
+&Ecom_BillTo_Postal_Name_Prefix=Mr.
+&Ecom_BillTo_Postal_Name_First=John
+&Ecom_BillTo_Postal_Name_Last=Doe
+&Ecom_BillTo_Postal_Name_Suffix=iVeri
+&Ecom_BillTo_Telecom_Phone_Number=4457500
+&Ecom_BillTo_Online_Email=t%40t.com
+&Ecom_Payment_Card_Number=4242424242424242
+&Ecom_Payment_Card_StartDate_Day=00
+&Ecom_Payment_Card_StartDate_Month=07
+&Ecom_Payment_Card_StartDate_Year=1999
+&Ecom_Payment_Card_ExpDate_Day=00
+&Ecom_Payment_Card_ExpDate_Month=07
+&Ecom_Payment_Card_ExpDate_Year=2001
+&Ecom_Payment_Card_Protocols=iVeri
+&Ecom_ConsumerOrderID=AUTOGENERATE
+&Ecom_TransactionComplete=False
+&Lite_Version_=2.0
+&Authorise=Authorise
+
+
+
+array(25) { 
+["Lite_Merchant_ApplicationId"]=> string(36) "981834E7-E051-4D6E-A587-D4FDD32A6F2B" 
+["Lite_Order_Amount"]=> string(9) "1522.8700" 
+["Lite_ConsumerOrderID_PreFix"]=> string(3) "INV" 
+["Ecom_BillTo_Postal_Name_First"]=> string(3) "tim" 
+["Ecom_BillTo_Postal_Name_Last"]=> string(1) "k" 
+["Ecom_BillTo_Online_Email"]=> string(19) "techytimo@gmail.com" 
+["Ecom_BillTo_Telecom_Phone_Number"]=> string(10) "0734567089" 
+["Ecom_BillTo_Postal_City"]=> string(7) "Nairobi" 
+["Ecom_Payment_Card_Protocols"]=> string(5) "IVERI" 
+["Ecom_ConsumerOrderID"]=> int(87) 
+["Ecom_TransactionComplete"]=> string(4) "TRUE" 
+["Ecom_Payment_Card_Type"]=> string(11) "unspecified" 
+["Ecom_Payment_Card_Number"]=> string(14) "42424242424242" 
+["Ecom_Payment_Card_ExpDate_Month"]=> string(2) "09" 
+["Ecom_Payment_Card_ExpDate_Year"]=> string(4) "2016" 
+["Lite_Order_LineItems_Product_1"]=> string(44) "All Blacks 12/13 Performance T-Shirt (Black)" 
+["Lite_Order_LineItems_Quantity_1"]=> int(1) 
+["Lite_Order_LineItems_Amount_1"]=> string(5) "45.97" 
+["Lite_Order_LineItems_Product_2"]=> string(41) "All Blacks 12/13 Training SS Rugby Jersey" 
+["Lite_Order_LineItems_Quantity_2"]=> int(13) 
+["Lite_Order_LineItems_Amount_2"]=> string(5) "63.97" 
+["Lite_Website_Successful_url"]=> string(39) "http://localhost:8000/checkout/order/87" 
+["Lite_Website_Fail_url"]=> string(35) "http://localhost:8000/checkout/fail" 
+["Lite_Website_TryLater_url"]=> string(39) "http://localhost:8000/checkout/trylater" 
+["Lite_Website_Error_url"]=> string(36) "http://localhost:8000/checkout/error" 
+}
+
+
+
+
+string(5) "error" 
+array(35) { 
+["EVENTTARGET_KEY"]=> string(0) "" 
+["EVENTARGUMENT_KEY"]=> string(0) "" 
+["VIEWSTATE_KEY"]=> string(5488) "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" 
+["PREVIOUSPAGE_KEY"]=> string(124) "Bnp9QELD9GYjRv9KNAS-P92tXNlLnomNU3H8ROm8fR8yh8wqFJtf1bMQOuCgsUbXlj_YG3c6TQ6oKxYDCbEOUVLnNrvaiSG89MnE_9mOVuiLSDL5tQ-PoqphoAs1" 
+["__EVENTVALIDATION"]=> string(828) "cq0PzezLo/4ahHyW3xPj43SRX6DDl2wnmRRJAyuuYRoJY+8oKYHEyvio7eV56lkOR52xUh+yNjOahHRPHOAEwhdBAR68JEe0QcnGxzXYJXB3xNYkd2zuQhlxR9broEQI+Con+K5ynUJbHTuf1FHoe2qEx1eSBIPHaUH5Jt4nSYEcc3h8/Hd/TVDYWayEr0HoP4lqCPzPJ7X2A2CflP83PCh1Ga1vfCY2JNxu1p3H7TgBuHmm9doOCNVH+wDT3eIbncHBP/m5M6z0bHTfOrfZZyHCwIipxOF0QPnW89LmOsPjdguem+arYpHF8CxyS03VeH7/Eu3ZGtXgbEV8MQEhuMqXRgMxZZihIze+cPW+fC10DswxQQDUFB1XHhRqOlykSF3aq5kcFMR0UB+RFCv+q6Lo1mJt8hheIVq52RksxcKYisUFgVkwr3TmjREuYb7IWKD9Qk159ITucwmZupBjllnt+y11NHMt912IaPGDRRwnLPiwjSv7lCvJ70sZrrx9q9aIYiw+6eQrSUKLlCSJ8xPj/Ko8Urv6pcsLlxKhs7qKw/LdmHTD/gNma4uVckaVW3Lae/zTzp57lo9TqnyvdF1UTlVAHKyFSA+FKsuCB+ZHPw59NmB3cQ1ucqqib8woFBDdTLlb1hTJxFzYzXwh60wq4GnnArtnBr7kxcT1AFxtrHUd26/5pRks7n+4U2pyut8m4HfDjV5zaNqgy44t7VO9AZtck2mWwcfAMhuJlbBjDJBZT4ddnii0ItA6FXYSAXmljTQxGh74WcvDUeefp4DoWLiinLlo0PgFTkc14bJag1/ssqQ0A3kk7Co=" 
+["hiddenStatus"]=> string(7) "OFFLINE" 
+["hiddenUG_ID"]=> string(0) "" 
+["LITE_ORDER_LINEITEMS_QUANTITY_1"]=> string(1) "1" 
+["_METHOD"]=> string(5) "PATCH" 
+["ECOM_CONSUMERORDERID"]=> string(2) "54" 
+["ECOM_PAYMENT_CARD_NUMBER"]=> string(16) "4242........4242" 
+["LITE_WEBSITE_TRYLATER_URL"]=> string(42) "https://www.vitumob.com/iverilite/trylater" 
+["LITE_WEBSITE_SUCCESSFUL_URL"]=> string(41) "https://www.vitumob.com/iverilite/success" 
+["ECOM_BILLTO_ONLINE_EMAIL"]=> string(19) "techytimo@gmail.com" 
+["ECOM_BILLTO_TELECOM_PHONE_NUMBER"]=> string(10) "0734567089" 
+["LITE_ORDER_LINEITEMS_PRODUCT_1"]=> string(41) "All Blacks 12/13 Training SS Rugby Jersey" 
+["_TOKEN"]=> string(40) "Uzv67t0Bd9SP7IeM3cgz3iyrwnVZ8T0RvSshtt88" 
+["ECOM_BILLTO_POSTAL_NAME_LAST"]=> string(1) "k" 
+["LITE_RESULT_DESCRIPTION"]=> string(29) "LITE_ORDER_AMOUNT [105.5975]" 
+["ECOM_BILLTO_POSTAL_NAME_PREFIX"]=> string(3) "Mr." 
+["LITE_MERCHANT_APPLICATIONID"]=> string(73) "981834E7-E051-4D6E-A587-D4FDD32A6F2B,981834E7-E051-4D6E-A587-D4FDD32A6F2B" 
+["ECOM_BILLTO_POSTAL_CITY"]=> string(7) "Nairobi" 
+["ECOM_PAYMENT_CARD_EXPDATE_MONTH"]=> string(1) "8" 
+["LITE_CONSUMERORDERID_PREFIX"]=> string(3) "INV" 
+["ECOM_TRANSACTIONCOMPLETE"]=> string(4) "TRUE" 
+["ECOM_PAYMENT_CARD_PROTOCOLS"]=> string(5) "IVERI" 
+["LITE_ORDER_AMOUNT"]=> string(8) "105.5975" 
+["ECOM_BILLTO_POSTAL_NAME_FIRST"]=> string(3) "tim" 
+["ECOM_PAYMENT_CARD_EXPDATE_YEAR"]=> string(4) "2014" 
+["LITE_ORDER_LINEITEMS_AMOUNT_1"]=> string(5) "63.97" 
+["LITE_WEBSITE_FAIL_URL"]=> string(38) "https://www.vitumob.com/iverilite/fail" 
+["LITE_WEBSITE_ERROR_URL"]=> string(39) "https://www.vitumob.com/iverilite/error" 
+["LITE_PAYMENT_CARD_STATUS"]=> string(3) "255" 
+["ECOM_PAYMENT_CARD_TYPE"]=> string(4) "Visa" 
+["buttonClickHere"]=> string(10) "Click Here" } 

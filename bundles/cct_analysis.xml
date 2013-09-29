@@ -1,0 +1,73 @@
+//var_dump Input::all() from normal CctsController@store
+
+array(14) { 
+["_token"]=> string(40) "z1PWBFIBaCtOtZalGgLYreb1pIHVISbzGbZeUMa2" 
+["order_id"]=> string(2) "23" 
+["amount"]=> string(4) "3232" 
+["status"]=> string(4) "cvsd" 
+["provider"]=> string(0) "" 
+["number"]=> string(0) "" 
+["ccv"]=> string(0) "" 
+["prefix"]=> string(0) "" 
+["fname"]=> string(0) "" 
+["lname"]=> string(0) "" 
+["email"]=> string(0) "" 
+["expiry_month"]=> string(0) "" 
+["expiry_year"]=> string(0) "" 
+["notes"]=> string(7) "wfqffqf" 
+}
+
+//normal array for above
+
+array( 
+"_token" => "z1PWBFIBaCtOtZalGgLYreb1pIHVISbzGbZeUMa2", 
+"order_id" => "23", 
+"amount" => "3232", 
+"status" => "cvsd", 
+"provider" => "", 
+"number" => "", 
+"ccv" => "", 
+"prefix" => "", 
+"fname" => "", 
+"lname" => "", 
+"email" => "", 
+"expiry_month" => "", 
+"expiry_year" => "", 
+"notes" => "wfqffqf" 
+)
+
+//var_dump json_decode(cctjson) - status.blade.php
+
+array{ 
+["order_id" => string(2) "75" 
+["amount" => string(3) "529" 
+["status" => string(3) "try" 
+["provider" => string(0) "" 
+["number" => string(14) "42424242424242" 
+["ccv" => string(0) "" 
+["prefix" => string(3) "Mr." 
+["fname" => string(3) "tim" 
+["lname" => string(1) "k" 
+["email" => string(19) "techytimo@gmail.com" 
+["expiry_month" => string(1) "1" 
+["expiry_year" => string(4) "2013" 
+["notes" => string(0) "" 
+}
+
+//normal array for above
+
+array(
+"order_id" => "75", 
+"amount" => "529", 
+"status" => "try", 
+"provider" => "", 
+"number" => "42424242424242", 
+"ccv" => "", 
+"prefix" => "Mr.", 
+"fname" => "tim", 
+"lname" => "k", 
+"email" => "techytimo@gmail.com", 
+"expiry_month" => "1", 
+"expiry_year" => "2013", 
+"notes" => "" 
+)

@@ -1,0 +1,163 @@
+/**
+ * CSS STYLING FILE
+ * Created by Eugene Mutai
+ * Date: 9/3/13
+ * Time: 2:41 PM
+ * Description:
+ */
+
+/*BRAND FONT*/
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Regular'), local('Raleway'), url('Copse-Regular.ttf') format('truetype');
+}
+
+ /* general purpose */
+html, body{padding: 0; margin: 0}
+body{
+	font-family: "raleway", sans-serif; width: 100%; margin: auto; max-width: 1900px; min-width: 800px;
+	cursor: default; overflow-x: hidden;
+}
+body{font-weight: 500; font-size: 1em; color: #7f8c8d}
+.wf-active body{font-family: 'raleway', sans-serif;}
+a{text-decoration: none; cursor: pointer}
+
+/******* Colors *******/
+.red{color: #e74c3c}
+.orange{color: #f39c12}
+.green{color: #2ecc71}
+.yellow{color: #f1c40f}
+.blue{color: #3498DB}
+.white{color: #fefefe}
+.grey{color: #bdc3c7}
+
+/****** Background colors *************/
+.red-bg{background: #e74c3c}
+.orange-bg{background: #f39c12}
+.green-bg{background: #2ecc71}
+.yellow-bg{background: #f1c40f}
+.blue-bg{background: #3498DB}
+.grey-bg{background: #bdc3c7}
+
+/********* OTHER DEFAULTS ******/
+.line{position: fixed; top: 0; left: 0; height: 100%}
+.line img{height: 100%}
+.space{margin-top: 10%}
+.content{width: 100%; margin:auto}
+
+.left{float: left}
+.right{float: right}
+.padding{padding: 10px}
+.small-padding{padding: 5px}
+.faded{opacity: 0.4}
+.largetext{font-size: 1.5em; padding: 0; margin: 0}
+.br{margin: 15px}
+.clear{clear: both;}
+.span{width: 100px}
+.span-1{width: 200px}
+.span-2{width: 300px}
+.span-3{width: 400px}
+.span-4{width: 100%}
+.uppercase{text-transform: uppercase}
+
+.border{border-width: 3px; border-style: solid; border-radius: 10px}
+.curves{border-radius: 5px}
+.link{ cursor: pointer;}
+.hide{display: none}
+
+.normal{font-weight: normal}
+.align-center{text-align: center}
+.positionfixed{position: fixed; top: 0; left: 0;}
+
+.blurthis{-webkit-filter: blur(2px); filter: blur(2px);}
+span.validationMessage{color: firebrick; text-align: left !important;}
+
+/**** OVER-RIDE *****/
+script{width: 100%; height: 100%}
+
+/**** APP MAIN TEMPLATE ****/
+body{background: #000000}
+.app-content, table.nav{width: 100%; height: 100%; margin: 0; padding: 0; border-spacing: 0}
+table td{text-align: center; vertical-align: top; border-spacing: 0}
+table.nav td.nav-side-bar{
+    width: 25%; font-size: 1.5em; color: snow;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, .5);
+    background: #1f3370; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1f3370 0%, #001e3f 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1f3370), color-stop(100%,#001e3f)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #1f3370 0%,#001e3f 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #1f3370 0%,#001e3f 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #1f3370 0%,#001e3f 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #1f3370 0%,#001e3f 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f3370', endColorstr='#001e3f',GradientType=0 ); /* IE6-9 */
+}
+.user-login{vertical-align: bottom; width: 90%; margin: auto}
+.nav-side-bar .user-login{font-size: 1em !important;}
+table.nav td.template-engine{width: 75%}
+.nav-bar ul{width: 100%; list-style-type: none; text-align: justify !important;}
+.nav-bar ul li{padding: 0.5em 1em; border-bottom: 1px solid darkgray; cursor: pointer}
+.nav-bar ul li:last-child{}
+.nav-bar ul li:hover{color: dodgerblue}
+
+
+/**** ABOUT US ****/
+.ember-animated-container{width: 80% !important; height: 100% !important;}
+.intro, .intro img{width: 100%; height: 100%; position: relative}
+.intro-content{
+    position: absolute; left: 15%; bottom: 35%; width: 65%; z-index: 10;
+    color: snow; padding: 2%; background: #000000; opacity: 0.9
+}
+.intro-content h2{font-size: 4em}
+.intro-content h3, .introduction h2{font-size: 3em}
+.intro-content p{font-size: 2em}
+
+/***** ABOUT ****/
+.introduction{width: 100%; height: 100%; text-align: justify; padding: 1em; margin: auto;background: #000000}
+.introduction div{width: 90%; margin: 0}
+.introduction h2{color: dodgerblue}
+.introduction p{font-size: 1.5em; margin: 1em; color: snow}
+
+
+/*** CONTACT US ***/
+.contact-us{
+    width: 100%; height: 100%;
+}
+.who{background: #3735bf; /* Old browsers */
+    background: -moz-linear-gradient(top,  #3735bf 0%, #2d0099 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3735bf), color-stop(100%,#2d0099)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #3735bf 0%,#2d0099 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #3735bf 0%,#2d0099 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #3735bf 0%,#2d0099 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #3735bf 0%,#2d0099 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3735bf', endColorstr='#2d0099',GradientType=0 ); /* IE6-9 */
+}
+.contact-form{padding-top: 10%}
+.contact-form form{width: 50%; margin: 0% 20%; box-shadow: 2px 1px 5em 1px #333
+}
+.contact-form form{background: #1f3370; padding: 2%; border-radius: 5px; vertical-align: middle}
+
+
+/**** SERVICES ****/
+.services > div{float: left; width: 150px; height:auto; padding: 1em; overflow: hidden;
+    background: snow; margin: 1em; border: 1px solid lightgray; border-radius: 4px }
+.services > div:hover{background: navy; color: #ffffff}
+.services .span6  ul li{text-align: justify; list-style-type: none}
+.services .span6 > ul > li ul li{padding-left: 1em}
+.span6 div{padding: 0.5em; border-bottom: 1px solid #565656
+}
+.services, .contact-us{background:url(../images/PIC.jpg); background-size: 100% 100%; width: 40%; height: 100%}
+
+/**** MY ORDER ****/
+.myorder{width: 100%; margin: auto; height: 100%; padding: 0; background: #b0deff; overflow-y: scroll}
+.myorder table{width: 100%; margin-bottom: 2em}
+.myorder table td{width: 50%; vertical-align: top; text-align: center}
+.myorder form{width: 85%; margin: auto 5%; text-align: justify}
+.myorder form select, .select2-container{min-width: 250px; max-width: 250px}
+.myorder .options{margin: 1em}
+.totalcost{padding: 1em; background: navy; color: #ffffff; border-radius: 3px}
+
+.uploadAttachment{width: 66%; position: fixed; top: 10%; left: 14%; z-index: 199; background: #fff; padding: 1em; border-radius: 4px}
+.overlay{width: 100%; height: 100%; position: fixed; background: #000; opacity: 0.8; top: 0; left: 0; z-index: 150}
+.overlay, .uploadAttachment{display: none}
+
+.notificationbar{background: #ffef95; color: #333; font-size: 16px; padding: 0.5em; border-bottom: 1px solid #ffd813; text-align: center; display: none}
