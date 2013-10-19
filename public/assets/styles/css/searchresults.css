@@ -1,0 +1,54 @@
+ul#searchresults{
+	background: white;
+	border-radius: 5px;
+	margin-left: 0px;
+	list-style: none;
+}
+ul#searchresults li {
+	background: #fbfbfb;
+	height: 140px;
+}
+ul#searchresults li:nth-child(even) {
+	background: #f1f1f1;
+}
+span.bookimage{
+	float: left;
+	width: 10%;
+	height: 140px;
+}
+span.bookimage img{
+	height: 130px;
+	padding: 5px;
+	width: 90%;
+}
+span.bookdata{
+	float: right;
+	width: 90%;
+	height: 110px;
+}
+span.bookdata h4{
+	height: 20px;
+	overflow: hidden;
+}
+span.bookdata p{
+	line-height: 15px;
+}
+span.bookactions{
+	float: right;
+	width: 90%;
+	height: 20px;
+}
+
+span.bookactions form#addtocart{
+	/*margin-top: -50px;*/
+	/*float: right;*/
+	position: relative;
+	top: -40px;
+	display: inline-table;
+	/*left: 130px;*/
+}
+span.bookactions .blue{
+	float:right;
+	margin-top: -5px;
+}
+

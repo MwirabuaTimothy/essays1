@@ -1,0 +1,7 @@
+.content{
+	font-size: 70%;
+}
+#doublescroll{
+	overflow:scroll;
+	overflow-y: hidden;
+}

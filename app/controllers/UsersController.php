@@ -44,6 +44,7 @@ class UsersController extends BaseController {
 	public function store()
 	{
 		$input = Input::all();
+		return var_dump($input);
 		$validation = Validator::make($input, User::$rules);
 
 		if ($validation->passes())

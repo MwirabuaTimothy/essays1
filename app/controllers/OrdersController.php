@@ -24,6 +24,10 @@ class OrdersController extends BaseController {
 		$orders = $this->order->all();
 
 		return View::make('orders.index', compact('orders'));
+		// $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+		// return json_encode($arr);
+		// return Response::json(['orders' => View::make('orders.index', compact('orders'))]);
+		// return Order::all();
 	}
 
 	/**

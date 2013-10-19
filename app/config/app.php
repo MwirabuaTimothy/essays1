@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/ember/public',
+	'url' => 'http://localhost/',
 
 	/*
 	|--------------------------------------------------------------------------

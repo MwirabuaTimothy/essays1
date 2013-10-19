@@ -1,0 +1,1554 @@
+
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>academicessaywritings</title>
+
+
+    <link href="pagelayout.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="validate.js" ></script>
+    <link href="js-image-slider.css" rel="stylesheet" type="text/css" />
+<script src="js-image-slider.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/cssmenu.js"></script>
+    <link href="style2.css" rel="stylesheet"/>
+  
+  </head>  
+   
+
+  <body onload="javascript:try{doOrderFormCalculation();}catch(e){}">
+<!-- start of wrapper -->
+<div style="width:40px; height:40px; float:right; position:fixed; margin-top:200px;">
+<!-- Begin OCC code for all departments/websites -->
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td class="occIcon-25724-0-1">&nbsp;</td></tr>
+<tr><td align="center"><a href="http://www.onlinechatcenters.com/" style="font-family: Arial, Helvetica, sans-serif; font-size: 9px; font-weight: normal; color: #000; text-decoration: none;">OCC Free Live Chat Software</a></td></tr>
+</table>
+<script type="text/javascript">
+(function() {
+var occ = document.createElement('script'); occ.type = 'text/javascript'; occ.async = true;
+occ.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.onlinechatcenters.com/code-25724-0-1.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(occ, s);
+})();
+</script>
+<!-- End OCC code -->
+</div>
+
+
+<div id="wrapper_order" style="height:auto" >
+
+<!-- start the head wrapper -->
+<div id="head_wrapper" style="height:200px; ">
+
+<div style="width:200px; height:200px; float:left; display:inline; ">
+<img src="photos/images 2.jpg" height="199" width="200" />
+</div>
+
+
+<div style="width:352px; float:right; display:inline; height:180px;">
+
+<div id="sliderFrame" style="width:352px; height:200px;">
+<div id="slider" style="width:352px; height:200px;" >
+
+<img src="photos/images 1.jpg" width="352px" height="200px" />
+
+<img src="photos/images 3.jpeg" width="352px" height="200px" /> 
+
+</div>
+</div>
+</div>
+
+
+
+
+<div style="width:530px; float:right; display:inline; height:180px;">
+<h4 style="color:#004262; font-family:Arial, Helvetica, sans-serif; font-weight:bold;">AcademicEssayWritings.com</h4>
+<p>support@academicessaywritings.com</p>
+
+</div>
+
+
+
+
+
+
+
+</div><!--div headwrapper ends here-->
+
+
+
+<!--start menu div-->
+<div id="menu">
+
+<a href="default.html">HOME</a>
+<a href="services.html">SERVICES</a>
+<a href="order.html">ORDER</a>
+<a href="about.html">ABOUT US</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">CONTACT US</a>
+
+</div><!--end menu div-->
+
+
+<hr   />
+
+ 
+    
+    <script language="javascript" type="text/javascript">
+
+function doOrderFormCalculation() {
+    var orderForm = document.getElementById('order_form');
+    var orderCostPerPage = 0;
+    var orderTotalCost = 0;
+    var single = orderForm.o_interval.checked;
+    var number = orderForm.numpages;
+
+    var discount = orderForm.discount_percent_h.value;
+    var wthdy = '';
+    var wthdyx = '';
+    var oc = 9.25 * doTypeOfDocumentCost(orderForm.document_type) * doAcademicLevelCost(orderForm.academic_level) * doUrgencyCost(orderForm.urgency) * doSubjectAreaCost(orderForm.subject_area) * doCurrencyRate(orderForm.curr);
+    orderCostPerPage = (oc - (oc) * discount / 100) + doVasPP(document.getElementsByName('vas_id[]'));
+    if (single == true) {
+        orderCostPerPage = orderCostPerPage * 2;
+        oc = oc * 2;
+        number.options[0].value = '1';
+        number.options[0].text = '1 page/approx 550 words';
+   document.getElementById("num_pg_ord").innerHTML = 'approx 550 words per page';
+        for (i = 1; i < number.length; i++) {
+
+            number.options[i].text = (i + 1) + ' pages/approx ' + (2 * (i + 1) * 275) + ' words';
+
+        }
+    } else {
+        number.options[0].value = '1';
+        number.options[0].text = '1 page/approx 275 words';
+   document.getElementById("num_pg_ord").innerHTML = 'approx 275 words per page';
+        for (i = 1; i < number.length; i++) {
+
+            number.options[i].text = (i + 1) + ' pages/approx ' + ((i + 1) * 275) + ' words';
+
+        }
+    }
+    number.options[number.selectedIndex].selected = true;
+    wthdy = Math.round(orderCostPerPage * Math.pow(10, 2)) / Math.pow(10, 2);
+    document.getElementById("cost_per_page").innerHTML = wthdy;
+    orderForm.MTIuOTUYGREXGHNMKJGT23467GGFDSSSbbbbbIOK.value = encode64(wthdy);
+    wthdyx = Math.round((orderCostPerPage * number.options[number.selectedIndex].value + doVasPO(document.getElementsByName('vas_id[]'))) * Math.pow(10, 2)) / Math.pow(10, 2);
+    document.getElementById("total").innerHTML = wthdyx;
+	orderForm.total.value = wthdyx;
+
+    orderForm.MMNBGFREWQASCXZSOPJHGVNMTIuOTU.value = wthdyx;
+
+   /* if (discount > 0) {
+  orderForm.discount_h.value = discount;
+  document.getElementById('lblCustomerSavings').style.display = 'block';
+  document.getElementById('lblCustomerSavingstext').style.display = 'none';
+  orderForm.lblCustomerSavings.value = 'Your savings are: ' + discount + '% (' + Math.round(((oc - orderCostPerPage + doVasPP(document.getElementsByName('vas_id[]'))) * number.options[number.selectedIndex].value) * Math.pow(10, 2)) / Math.pow(10, 2) + ' ' + orderForm.curr.options[orderForm.curr.selectedIndex].text+ ')';
+        document.getElementById('lblCustomerSavings').innerHTML = 'Your savings are: ' + discount + '% (' + Math.round(((oc - orderCostPerPage + doVasPP(document.getElementsByName('vas_id[]'))) * number.options[number.selectedIndex].value) * Math.pow(10, 2)) / Math.pow(10, 2) + ' ' + orderForm.curr.options[orderForm.curr.selectedIndex].text+ ')';
+  orderForm.discount_h.value = Math.round(((oc - orderCostPerPage + doVasPP(document.getElementsByName('vas_id[]'))) * number.options[number.selectedIndex].value) * Math.pow(10, 2)) / Math.pow(10, 2);
+    } else {
+        document.getElementById('lblCustomerSavings').innerHTML = '';
+        document.getElementById('lblCustomerSavingstext').style.display = 'block';
+        document.getElementById('lblCustomerSavings').style.display = 'none';
+    }*/
+}
+
+
+</script>
+<script language="javascript" type="text/javascript">
+/*function doDiscount() {
+$("#discount_check").html("Please wait..."); 
+  $.get("discount.php",{ total: $(".MMNBGFREWQASCXZSOPJHGVNMTIuOTU").val(),  code: $(".discount_code").val()  } ,function(data){
+    if (isNaN (data)) {
+    $("#discount_check").html(data);
+    } else {
+        // A valid Number
+        // do some processing with the number
+      if (data > 0) { 
+        $(".discount_percent_h").val(data);
+        document.getElementById('lblCustomerSavingstext').style.display = 'none';
+        doOrderFormCalculation();
+      } else {
+        alert('discount 0') ;
+        
+
+      }
+    }
+
+        
+
+  });
+}*/
+</script>
+<script language="javascript" type="text/javascript">
+function doTypeOfDocumentCost(tod) {
+    if (tod.options[tod.selectedIndex].value == 0) {
+        return 1.00
+    }   else if (tod.options[tod.selectedIndex].value == 1) {
+        return 1.00    } 
+ else if (tod.options[tod.selectedIndex].value == 2) {
+        return 1.20    } 
+ else if (tod.options[tod.selectedIndex].value == 3) {
+        return 1.12    } 
+ else if (tod.options[tod.selectedIndex].value == 4) {
+        return 1.12    } 
+ else if (tod.options[tod.selectedIndex].value == 5) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 6) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 7) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 8) {
+        return 1.40    } 
+ else if (tod.options[tod.selectedIndex].value == 9) {
+        return 1.40    } 
+ else if (tod.options[tod.selectedIndex].value == 10) {
+        return 1.40    } 
+ else if (tod.options[tod.selectedIndex].value == 11) {
+        return 1.30    } 
+ else if (tod.options[tod.selectedIndex].value == 12) {
+        return 1.30    } 
+ else if (tod.options[tod.selectedIndex].value == 13) {
+        return 1.30    } 
+ else if (tod.options[tod.selectedIndex].value == 14) {
+        return 1.30    } 
+ else if (tod.options[tod.selectedIndex].value == 15) {
+        return 1.30    } 
+ else if (tod.options[tod.selectedIndex].value == 16) {
+        return 1.30    } 
+ else if (tod.options[tod.selectedIndex].value == 17) {
+        return 1.30    } 
+ else if (tod.options[tod.selectedIndex].value == 18) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 19) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 20) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 21) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 22) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 23) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 24) {
+        return 0.50    } 
+ else if (tod.options[tod.selectedIndex].value == 25) {
+        return 0.40    } 
+ else if (tod.options[tod.selectedIndex].value == 26) {
+        return 0.40    } 
+ else if (tod.options[tod.selectedIndex].value == 27) {
+        return 1.10    } 
+ else if (tod.options[tod.selectedIndex].value == 28) {
+        return 1.10    } 
+ else if (tod.options[tod.selectedIndex].value == 29) {
+        return 1.10    } 
+ else if (tod.options[tod.selectedIndex].value == 30) {
+        return 1.10    } 
+ else if (tod.options[tod.selectedIndex].value == 31) {
+        return 1.10    } 
+ else if (tod.options[tod.selectedIndex].value == 32) {
+        return 1.10    } 
+ else if (tod.options[tod.selectedIndex].value == 33) {
+        return 1    } 
+ else if (tod.options[tod.selectedIndex].value == 34) {
+        return 1.10    } 
+ else if (tod.options[tod.selectedIndex].value == 35) {
+        return 1.10    } 
+ else if (tod.options[tod.selectedIndex].value == 36) {
+        return 1.27    } 
+ else if (tod.options[tod.selectedIndex].value == 37) {
+        return 0.25    } 
+ else if (tod.options[tod.selectedIndex].value == 38) {
+        return 1.50    } 
+}
+
+</script>
+<script language="javascript" type="text/javascript">
+function doAcademicLevelCost(al) {
+    if (al.options[al.selectedIndex].value == 1) {
+        return 1.00
+    } else if (al.options[al.selectedIndex].value == 2) {
+        return 1.20
+    } else if (al.options[al.selectedIndex].value == 3) {
+        return 1.30
+    } else if (al.options[al.selectedIndex].value == 4) {
+        return 1.40
+    }
+}
+</script>
+<script language="javascript" type="text/javascript">
+function doUrgencyCost(urgency) {
+    if (urgency.options[urgency.selectedIndex].value == 6) {
+        return 3.00
+    } else if (urgency.options[urgency.selectedIndex].value == 7) {
+        return 2.60
+    } else if (urgency.options[urgency.selectedIndex].value == 8) {
+        return 2.20
+    } else if (urgency.options[urgency.selectedIndex].value == 9) {
+        return 1.90
+    } else if (urgency.options[urgency.selectedIndex].value == 10) {
+        return 1.75
+    } else if (urgency.options[urgency.selectedIndex].value == 11) {
+        return 1.65
+    } else if (urgency.options[urgency.selectedIndex].value == 12) {
+        return 1.40
+    } else if (urgency.options[urgency.selectedIndex].value == 13) {
+        return 1.15
+    } else if (urgency.options[urgency.selectedIndex].value == 14) {
+        return 1.15
+    } else if (urgency.options[urgency.selectedIndex].value == 15) {
+        return 1.15
+    } else if (urgency.options[urgency.selectedIndex].value == 16) {
+        return 3.30
+    }
+}
+</script>
+<script language="javascript" type="text/javascript">
+function doSubjectAreaCost(subject) {
+    if (subject.options[subject.selectedIndex].value == 18) {
+        return 1.20
+    }  else if (subject.options[subject.selectedIndex].value == 10) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 12) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 15) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 17) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 13) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 16) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 18) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 11) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 14) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 112) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 52) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 111) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 102) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 105) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 107) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 103) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 104) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 115) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 53) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 60) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 61) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 58) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 62) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 59) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 57) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 63) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 64) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 87) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 93) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 89) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 88) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 90) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 67) {
+        return 1.45    } 
+ else if (subject.options[subject.selectedIndex].value == 9) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 24) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 36) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 38) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 37) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 42) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 41) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 44) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 45) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 40) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 39) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 43) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 47) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 49) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 48) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 7) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 2) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 4) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 5) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 6) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 3) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 116) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 54) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 56) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 51) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 94) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 99) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 97) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 101) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 95) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 100) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 96) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 78) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 85) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 113) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 86) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 83) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 79) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 80) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 28) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 110) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 29) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 21) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 108) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 22) {
+        return 1.00    } 
+ else if (subject.options[subject.selectedIndex].value == 65) {
+        return 1.45    } 
+ else if (subject.options[subject.selectedIndex].value == 71) {
+        return 1.45    } 
+ else if (subject.options[subject.selectedIndex].value == 70) {
+        return 1.45    } 
+ else if (subject.options[subject.selectedIndex].value == 72) {
+        return 1.45    } 
+ else if (subject.options[subject.selectedIndex].value == 73) {
+        return 1.45    } 
+ else if (subject.options[subject.selectedIndex].value == 75) {
+        return 1.45    } 
+ else if (subject.options[subject.selectedIndex].value == 77) {
+        return 1.45    } 
+ else if (subject.options[subject.selectedIndex].value == 114) {
+        return 1.00    } 
+
+}
+</script>
+<script language="javascript" type="text/javascript">
+// function doCurrencyRate(curr) {
+//     if (curr.options[curr.selectedIndex].value == 1) {
+//         return 1.00
+//     } else if (curr.options[curr.selectedIndex].value == 2) {
+//         return 0.60
+//     } else if (curr.options[curr.selectedIndex].value == 3) {
+//         return 0.93
+//     } else if (curr.options[curr.selectedIndex].value == 4) {
+//         return 0.92
+//     } else if (curr.options[curr.selectedIndex].value == 5) {
+//         return 0.68
+//     }
+// }
+function doCurrencyRate(curr) {
+    if (curr.options[curr.selectedIndex].value == "USD") {
+        return 1.00
+    } else if (curr.options[curr.selectedIndex].value == "GBP") {
+        return 0.60
+    } else if (curr.options[curr.selectedIndex].value == "CAD") {
+        return 0.93
+    } else if (curr.options[curr.selectedIndex].value == "AUD") {
+        return 0.92
+    } else if (curr.options[curr.selectedIndex].value == "EUR") {
+        return 0.68
+    }
+}
+</script>
+
+<script language="javascript" type="text/javascript">var pp = [];var po = [];pp[3] = 2.95;po[6] = 9.95;</script>
+<script language="javascript" type="text/javascript">
+function doVasPP(vas) {
+    var return_sum = 0;
+    for (var i = 0; i < vas.length; i++) {
+        if ((vas[i].checked == true) && (vas[i].id.indexOf('page') != -1) && (!isNaN(pp[vas[i].value]))) {
+            return_sum += pp[vas[i].value];
+        }
+    }
+    return return_sum;
+}
+</script>
+<script language="javascript" type="text/javascript">
+function doVasPO(vas) {
+    var return_sum = 0;
+    for (var i = 0; i < vas.length; i++) {
+        if ((vas[i].checked == true) && (vas[i].id.indexOf('order') != -1) && (!isNaN(po[vas[i].value]))) {
+            return_sum += po[vas[i].value];
+        }
+    }
+    return return_sum;
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+
+  var keyStr = "ABCDEFGHIJKLMNOP" +
+               "QRSTUVWXYZabcdef" +
+               "ghijklmnopqrstuv" +
+               "wxyz0123456789+/" +
+               "=";
+
+
+
+
+  function encode64(input) {
+     input = escape(input);
+     var output = "";
+     var chr1, chr2, chr3 = "";
+     var enc1, enc2, enc3, enc4 = "";
+     var i = 0;
+
+     do {
+        chr1 = input.charCodeAt(i++);
+        chr2 = input.charCodeAt(i++);
+        chr3 = input.charCodeAt(i++);
+
+        enc1 = chr1 >> 2;
+        enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+        enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+        enc4 = chr3 & 63;
+
+        if (isNaN(chr2)) {
+           enc3 = enc4 = 64;
+        } else if (isNaN(chr3)) {
+           enc4 = 64;
+        }
+
+        output = output +
+           keyStr.charAt(enc1) +
+           keyStr.charAt(enc2) +
+           keyStr.charAt(enc3) +
+           keyStr.charAt(enc4);
+        chr1 = chr2 = chr3 = "";
+        enc1 = enc2 = enc3 = enc4 = "";
+     } while (i < input.length);
+
+     return output;
+  }
+
+  function decode64(input) {
+     var output = "";
+     var chr1, chr2, chr3 = "";
+     var enc1, enc2, enc3, enc4 = "";
+     var i = 0;
+
+     // remove all characters that are not A-Z, a-z, 0-9, +, /, or =
+     var base64test = /[^A-Za-z0-9\+\/\=]/g;
+     if (base64test.exec(input)) {
+        alert("There were invalid base64 characters in the input text.\n" +
+              "Valid base64 characters are A-Z, a-z, 0-9, '+', '/',and '='\n" +
+              "Expect errors in decoding.");
+     }
+     input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+     do {
+        enc1 = keyStr.indexOf(input.charAt(i++));
+        enc2 = keyStr.indexOf(input.charAt(i++));
+        enc3 = keyStr.indexOf(input.charAt(i++));
+        enc4 = keyStr.indexOf(input.charAt(i++));
+
+        chr1 = (enc1 << 2) | (enc2 >> 4);
+        chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+        chr3 = ((enc3 & 3) << 6) | enc4;
+
+        output = output + String.fromCharCode(chr1);
+
+        if (enc3 != 64) {
+           output = output + String.fromCharCode(chr2);
+        }
+        if (enc4 != 64) {
+           output = output + String.fromCharCode(chr3);
+        }
+
+        chr1 = chr2 = chr3 = "";
+        enc1 = enc2 = enc3 = enc4 = "";
+
+     } while (i < input.length);
+
+     return unescape(output);
+  }
+</script>
+
+<div id="form_wrapper">
+    	
+
+
+
+
+
+
+
+
+
+
+
+        <!--Order Paper Start -->
+            
+
+        <form id="order_form" enctype="multipart/form-data" class="form-horizontal" name="orderForm" method="post" onsubmit="return validateForm();" action="previeworder.php">
+              <!--user details table start -->
+          <div class="userdetails">
+              <table id="userdetails" width="924">  
+                      <div class="utop"> Customer Details</div>
+                      <tbody>
+                        <tr>
+                          <td width="316" height="74">
+                            <label  for="input01">First name: </label>
+                    <input id="fname" class="order_input"  name="fname" value="" type="text">
+                         <span class="error"></span>
+                          </td>
+                          <td width="316">
+                    <label  for="input01">Last name: </label>
+                     <input class="order_input" id="lname" name="lname" value="" type="text">
+                          <span class="error"></span>
+                          </td>
+                        <tr>
+                            <td>
+                              <label  for="input01">E-mail: </label>
+
+                    <input  class="order_input" name="uemail" id="uemail" value="" type="text" >
+                    <span class="error"></span>
+
+
+                            </td>
+                            
+                           
+                            <td>
+                              <label>Country</label>
+                              <select name="country" id="Country" class="order_input">
+                                <option selected="selected" value=""></option>
+          <option value="Afghanistan"> Afghanistan </option><option value="Albania">  Albania </option><option value="Algeria">  Algeria </option><option value="Andorra">  Andorra </option><option value="Angola">  Angola  </option><option value="Antigua &amp; Deps">  Antigua &amp; Deps  </option><option value="Argentina">  Argentina </option><option value="Armenia">  Armenia </option><option value="Australia">  Australia </option><option value="Austria">  Austria </option><option value="Azerbaijan">  Azerbaijan  </option><option value="Bahamas">  Bahamas </option><option value="Bafrain">  Bahrain </option><option value="Bangladesh">  Bangladesh  </option><option value="Barbados">  Barbados  </option><option value="Belarus">  Belarus </option><option value="Belgium">  Belgium </option><option value="Belize">  Belize  </option><option value="Benin">  Benin </option><option value="Bhutan">  Bhutan  </option><option value="Bolivia">  Bolivia </option><option value="Bosnia Herzegovina">  Bosnia Herzegovina  </option><option value="Botswana">  Botswana  </option><option value="Brazil">  Brazil  </option><option value="Brunei">  Brunei  </option><option value="Bulgaria">  Bulgaria  </option><option value="Burkina">  Burkina </option><option value="Burundi">  Burundi </option><option value="Cambodia">  Cambodia  </option><option value="Cameroon">  Cameroon  </option><option value="Canada">  Canada  </option><option value="Cape Verde">  Cape Verde  </option><option value="Central African Rep">  Central African Rep</option><option value="Chad"> Chad  </option><option value="Chile">  Chile </option><option value="China">  China </option><option value="Colombia">  Colombia  </option><option value="Comoros">  Comoros </option><option value="Congo">  Congo </option><option value="Congo Democratic">  Congo Democratic R</option><option value="Costa Rica"> Costa Rica  </option><option value="Croatia">  Croatia </option><option value="Cuba">  Cuba  </option><option value="Cyprus">  Cyprus  </option><option value="Czech Republic">  Czech Republic  </option><option value="Denmark">  Denmark </option><option value="Djibouti">  Djibouti  </option><option value="Dominica">  Dominica  </option><option value="Dominican Republic">  Dominican Republic  </option><option value="East Timor">  East Timor  </option><option value="Ecuador">  Ecuador </option><option value="Egypt">  Egypt </option><option value="El Salvador">  El Salvador </option><option value="Equatorial Guinea">  Equatorial Guinea </option><option value="Eritrea">  Eritrea </option><option value="Estonia">  Estonia </option><option value="Ethiopia">  Ethiopia  </option><option value="Fiji">  Fiji  </option><option value="Finland">  Finland </option><option value="France">  France  </option><option value="Gabon">  Gabon </option><option value="Gambia">  Gambia </option><option value="Georgia">  Georgia </option><option value="Germany">  Germany </option><option value="Ghana">  Ghana </option><option value="Greece">  Greece  </option><option value="Grenada">  Grenada </option><option value="Guatemala">  Guatemala </option><option value="Guinea">  Guinea  </option><option value="Guinea Bissau">  Guinea-Bissau </option><option value="Guyana">  Guyana  </option><option value="Haiti">  Haiti </option><option value="Honduras">  Honduras  </option><option value="Hungary">  Hungary </option><option value="Iceland">  Iceland </option><option value="India">  India </option><option value="Indonesia">  Indonesia </option><option value="Iran">  Iran  </option><option value="Irag">  Iraq  </option><option value="Ireland Republic">  Ireland {Republic}  </option><option value="Israel">  Israel  </option><option value="Italy">  Italy </option><option value="Ivory Coast">  Ivory Coast </option><option value="Jamaica">  Jamaica </option><option value="Japan">  Japan </option><option value="Jordan">  Jordan  </option><option value="Kazakhstan">  Kazakhstan  </option><option value="Kenya">  Kenya </option><option value="Kiribati"> Kiribati  </option><option value="Korea North"> Korea North </option><option value="Korea South"> Korea South </option><option value="Kosovo"> Kosovo  </option><option value="Kuwait"> Kuwait  </option><option value="Kyrgyzstan"> Kyrgyzstan  </option><option value="Laos"> Laos  </option><option value="Lativia"> Latvia  </option><option value="Lebanon"> Lebanon </option><option value="Lesotho"> Lesotho </option><option value="Liberia"> Liberia </option><option value="Libya"> Libya </option><option value="Liechtenstein"> Liechtenstein </option><option value="Lithuania"> Lithuania </option><option value="Luxembourg"> Luxembourg  </option><option value="Macedonia"> Macedonia </option><option value="Madagascar"> Madagascar  </option><option value="Malawi"> Malawi  </option><option value="Malaysia"> Malaysia  </option><option value="Maldives"> Maldives  </option><option value="Mali"> Mali  </option><option value="Malta"> Malta </option><option value="Majoshall Islands"> Majoshall Islands </option><option value="Mauritania"> Mauritania  </option><option value="Mauritius"> Mauritius </option><option value="Mexico"> Mexico  </option><option value="Micronesia"> Micronesia  </option><option value="Moldova"> Moldova </option><option value="Monaco"> Monaco  </option><option value="Mongolia"> Mongolia  </option><option value="Montenegro"> Montenegro  </option><option value="Morocco"> Morocco </option><option value="Mozambique"> Mozambique  </option><option value="Myanmar {Burma}"> Myanmar, {Burma}  </option><option value="Namibia"> Namibia </option><option value="Nauru"> Nauru </option><option value="Nepal"> Nepal </option><option value="Netherlands"> Netherlands </option><option value="New Zealand"> New Zealand </option><option value="Nicaragua"> Nicaragua </option><option value="Niger"> Niger </option><option value="Nigeria"> Nigeria </option><option value="Norway"> Norway  </option><option value="Oman"> Oman  </option><option value="Pakistan"> Pakistan  </option><option value="Palau"> Palau </option><option value="Panama"> Panama  </option><option value="Papua New Guinea"> Papua New Guinea  </option><option value="Paraguay"> Paraguay  </option><option value="Peru"> Peru  </option><option value="Philipines"> Philippines </option><option value="Poland"> Poland  </option><option value="Portugal"> Portugal  </option><option value="Qatar"> Qatar </option><option value="Romania"> Romania </option><option value="Russian Federation"> Russian Federation  </option><option value="Rwanda"> Rwanda  </option><option value="St Kitts &amp; Nevis"> St Kitts &amp; Nevis  </option><option value="St Lucia"> St Lucia  </option><option value="Saint Vincent"> Saint Vincent &amp; the</option><option value="Samoa">  Samoa </option><option value="San Marino"> San Marino  </option><option value="Sao Tome &amp; Principe"> Sao Tome &amp; Principe</option><option value="Saudi Arabia">  Saudi Arabia  </option><option value="Senegal"> Senegal </option><option value="Serbia"> Serbia  </option><option value="Seychelles"> Seychelles  </option><option value="Sierra Leone"> Sierra Leone  </option><option value="Singapore"> Singapore </option><option value="Slovakia"> Slovakia  </option><option value="Slovenia"> Slovenia  </option><option value="Solomon Islands"> Solomon Islands </option><option value="Somalia"> Somalia </option><option value="South Africa"> South Africa  </option><option value="Spain"> Spain </option><option value="Sri Lanka"> Sri Lanka </option><option value="Sudan"> Sudan </option><option value="Suriname"> Suriname  </option><option value="Swaziland"> Swaziland </option><option value="Sweden"> Sweden  </option><option value="Switzerland"> Switzerland </option><option value="Syria"> Syria </option><option value="Taiwan"> Taiwan  </option><option value="Tajikistan"> Tajikistan  </option><option value="Tanzania"> Tanzania  </option><option value="Thailand"> Thailand  </option><option value="Togo"> Togo  </option><option value="Tonga"> Tonga </option><option value="Trinidad &amp; Tobago"> Trinidad &amp; Tobago </option><option value="Tunisia"> Tunisia </option><option value="Turkey"> Turkey  </option><option value="Turkmenistan"> Turkmenistan  </option><option value="Tuvalu"> Tuvalu  </option><option value="Uganda"> Uganda  </option><option value="Ukraine"> Ukraine </option><option value="United Arab Emirate"> United Arab Emirate</option><option value="United Kingdom">  United Kingdom  </option><option value="United States"> United States </option><option value="Uruguay"> Uruguay </option><option value="Uzbekistan"> Uzbekistan  </option><option value="Vanuatu"> Vanuatu </option><option value="Vatican City"> Vatican City  </option><option value="Venezuela"> Venezuela </option><option value="Vietnam"> Vietnam </option><option value="Yemen"> Yemen </option><option value="Zambia"> Zambia  </option><option value="Zibambwe"> Zimbabwe  </option>       </select>
+                            <span class="error"></span>
+                            </td>
+		<td width="276"><label for="input6" >PHONE CONTACTS</label>
+		<input name="phone_contacts" id="phone_contacts" type="text " /></td>
+                        </tr>
+
+                        </tr>
+                      </tbody>
+            </table>
+          </div>
+                    <div class="userdetails">
+
+
+              <!--user details table end -->
+               <!--order part 1 details table start -->
+                <table width="688">
+                    <div class="utop"> Order Details</div>
+                  
+                  <tr><td width="680">
+                    <label for="topic">Topic:<span class="required_star">*</span></label>   
+                    <input class="topic "id="topic" name="topic" type="text" value=" " maxlength="500" size="27" />
+                    <span class="error"></span>
+                  </td></tr> 
+               </table>
+               <table width="689">
+        <tr>
+                    <td width="314">
+                        <label for="subjectarea">Subject area:<span class="required_star">*</span></label>
+                        
+                        
+                            <select title="Subject area" class="order_input" name="subject_area" onchange="javascript:doOrderFormCalculation();" onclick="javascript:doOrderFormCalculation();">
+                                                        <option value="10" >Art</option>
+
+                                                        <option value="12" >&nbsp;&nbsp;Architecture</option>
+                                                        <option value="15" >&nbsp;&nbsp;Dance</option>
+                                                        <option value="17" >&nbsp;&nbsp;Design Analysis</option>
+                                                        <option value="13" >&nbsp;&nbsp;Drama</option>
+                                                        <option value="16" >&nbsp;&nbsp;Movies</option>
+                                                        <option value="18" >&nbsp;&nbsp;Music</option>
+
+                                                        <option value="11" >&nbsp;&nbsp;Paintings</option>
+                                                        <option value="14" >&nbsp;&nbsp;Theatre</option>
+                                                        <option value="112" >Biology</option>
+                                                        <option value="52" >Business</option>
+                                                        <option value="111" >Chemistry</option>
+                                                        <option value="102" >Communications and Media</option>
+
+                                                        <option value="105" >&nbsp;&nbsp;Advertising</option>
+                                                        <option value="107" >&nbsp;&nbsp;Communication Strategies</option>
+                                                        <option value="103" >&nbsp;&nbsp;Journalism</option>
+                                                        <option value="104" >&nbsp;&nbsp;Public Relations</option>
+                                                        <option value="115" >Creative writing</option>
+                                                        <option value="53" >Economics</option>
+
+                                                        <option value="60" >&nbsp;&nbsp;Accounting</option>
+                                                        <option value="61" >&nbsp;&nbsp;Case Study</option>
+                                                        <option value="58" >&nbsp;&nbsp;Company Analysis</option>
+                                                        <option value="62" >&nbsp;&nbsp;E-Commerce</option>
+                                                        <option value="59" >&nbsp;&nbsp;Finance</option>
+                                                        <option value="57" >&nbsp;&nbsp;Investment</option>
+
+                                                        <option value="63" >&nbsp;&nbsp;Logistics</option>
+                                                        <option value="64" >&nbsp;&nbsp;Trade</option>
+                                                        <option value="87" >Education</option>
+                                                        <option value="93" >&nbsp;&nbsp;Application Essay</option>
+                                                        <option value="89" >&nbsp;&nbsp;Education Theories</option>
+                                                        <option value="88" >&nbsp;&nbsp;Pedagogy</option>
+
+                                                        <option value="90" >&nbsp;&nbsp;Teacher's Career</option>
+                                                        <option value="67" >Engineering</option>
+                                                        <option value="9" >English</option>
+                                                        <option value="24" >Ethics</option>
+                                                        <option value="36" >History</option>
+                                                        <option value="38" >&nbsp;&nbsp;African-American Studies</option>
+
+                                                        <option value="37" >&nbsp;&nbsp;American History</option>
+                                                        <option value="42" >&nbsp;&nbsp;Asian Studies</option>
+                                                        <option value="41" >&nbsp;&nbsp;Canadian Studies</option>
+                                                        <option value="44" >&nbsp;&nbsp;East European Studies</option>
+                                                        <option value="45" >&nbsp;&nbsp;Holocaust</option>
+                                                        <option value="40" >&nbsp;&nbsp;Latin-American Studies</option>
+
+                                                        <option value="39" >&nbsp;&nbsp;Native-American Studies</option>
+                                                        <option value="43" >&nbsp;&nbsp;West European Studies</option>
+                                                        <option value="47" >Law</option>
+                                                        <option value="49" >&nbsp;&nbsp;Criminology</option>
+                                                        <option value="48" >&nbsp;&nbsp;Legal Issues</option>
+                                                        <option value="7" >Linguistics</option>
+
+                                                        <option value="2" >Literature</option>
+                                                        <option value="4" >&nbsp;&nbsp;American Literature</option>
+                                                        <option value="5" >&nbsp;&nbsp;Antique Literature</option>
+                                                        <option value="6" >&nbsp;&nbsp;Asian Literature</option>
+                                                        <option value="3" >&nbsp;&nbsp;English Literature</option>
+                                                        <option value="116" >&nbsp;&nbsp;Shakespeare Studies</option>
+
+                                                        <option value="54" >Management</option>
+                                                        <option value="56" >Marketing</option>
+                                                        <option value="51" >Mathematics</option>
+                                                        <option value="94" >Medicine and Health</option>
+                                                        <option value="99" >&nbsp;&nbsp;Alternative Medicine</option>
+                                                        <option value="97" >&nbsp;&nbsp;Healthcare</option>
+
+                                                        <option value="101" >&nbsp;&nbsp;Nursing</option>
+                                                        <option value="95" >&nbsp;&nbsp;Nutrition</option>
+                                                        <option value="100" >&nbsp;&nbsp;Pharmacology</option>
+                                                        <option value="96" >&nbsp;&nbsp;Sport</option>
+                                                        <option value="78" >Nature</option>
+                                                        <option value="85" >&nbsp;&nbsp;Agricultural Studies</option>
+
+                                                        <option value="113" >&nbsp;&nbsp;Anthropology</option>
+                                                        <option value="86" >&nbsp;&nbsp;Astronomy</option>
+                                                        <option value="83" >&nbsp;&nbsp;Environmental Issues</option>
+                                                        <option value="79" >&nbsp;&nbsp;Geography</option>
+                                                        <option value="80" >&nbsp;&nbsp;Geology</option>
+                                                        <option value="28" >Philosophy</option>
+
+                                                        <option value="110" >Physics</option>
+                                                        <option value="29" >Political Science</option>
+                                                        <option value="21" >Psychology</option>
+                                                        <option value="108" >Religion and Theology</option>
+                                                        <option value="22" >Sociology</option>
+                                                        <option value="65" >Technology</option>
+
+                                                        <option value="71" >&nbsp;&nbsp;Aeronautics</option>
+                                                        <option value="70" >&nbsp;&nbsp;Aviation</option>
+                                                        <option value="72" >&nbsp;&nbsp;Computer Science</option>
+                                                        <option value="73" >&nbsp;&nbsp;Internet</option>
+                                                        <option value="75" >&nbsp;&nbsp;IT Management</option>
+                                                        <option value="77" >&nbsp;&nbsp;Web Design</option>
+
+                                                        <option value="114" >Tourism</option>
+                      </select>
+            </td>
+                    <td width="363">
+                        <label for="typeofdocument">Type of document:</label>
+
+                            
+
+                            <select class="order_input2" name="document_type" onchange="javascript:doOrderFormCalculation();" onclick="javascript:doOrderFormCalculation();">
+
+                                 
+                                <option value="1" >Essay</option>
+                                 
+                                <option value="2" >Term Paper</option>
+                                 
+                                <option value="3" >Research Paper</option>
+                                 
+                                <option value="4" >Coursework</option>
+
+                                 
+                                <option value="5" >Book Report</option>
+                                 
+                                <option value="6" >Book Review</option>
+                                 
+                                <option value="7" >Movie Review</option>
+                                 
+                                <option value="8" >Dissertation</option>
+                                 
+                                <option value="9" >Thesis</option>
+                                 
+                                <option value="10" >Thesis Proposal</option>
+
+                                 
+                                <option value="11" >Research Proposal</option>
+                                 
+                                <option value="12" >Dissertation Chapter - Abstract</option>
+                                 
+                                <option value="13" >Dissertation Chapter - Introduction Chapter</option>
+                                 
+                                <option value="14" >Dissertation Chapter - Literature Review</option>
+                                 
+                                <option value="15" >Dissertation Chapter - Methodology</option>
+                                 
+                                <option value="16" >Dissertation Chapter - Results</option>
+
+                                 
+                                <option value="17" >Dissertation Chapter - Discussion</option>
+                                 
+                                <option value="18" >Dissertation Services - Editing</option>
+                                 
+                                <option value="19" >Dissertation Services - Proofreading</option>
+                                 
+                                <option value="20" >Formatting</option>
+                                 
+                                <option value="21" >Admission Services - Admission Essay</option>
+                                 
+                                <option value="22" >Admission Services - Scholarship Essay</option>
+
+                                 
+                                <option value="23" >Admission Services - Personal Statement</option>
+                                 
+                                <option value="24" >Admission Services - Editing</option>
+                                 
+                                <option value="25" >Editing</option>
+                                 
+                                <option value="26" >Proofreading</option>
+                                 
+                                <option value="27" >Case Study</option>
+                                 
+                                <option value="28" >Lab Report</option>
+
+                                 
+                                <option value="29" >Speech Presentation</option>
+                                 
+                                <option value="30" >Math Problem</option>
+                                 
+                                <option value="31" >Article</option>
+                                 
+                                <option value="32" >Article Critique</option>
+                                 
+                                <option value="33" >Annotated Bibliography</option>
+                                 
+                                <option value="34" >Reaction Paper</option>
+
+                                 
+                                <option value="35" >PowerPoint Presentation</option>
+                                 
+                                <option value="36" >Statistics Project</option>
+                                 
+                                <option value="37" >Multiple Choice Questions (None-Time-Framed)</option>
+                                 
+                                <option value="38" >Other (Not listed)</option>
+                                
+                            </select>
+                        
+
+            </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="numberofpages">Number of pages/words:<span class="required_star">*</span></label>
+                        
+
+                            <select class="order_input" title="Number of pages" name="numpages" onchange="javascript:doOrderFormCalculation();" onclick="javascript:doOrderFormCalculation();">
+
+                             
+                            <option value="1" >1 page(s) / 275 words</option>
+                             
+                            <option value="2" >2 page(s) / 550 words</option>
+                             
+                            <option value="3" >3 page(s) / 825 words</option>
+                             
+                            <option value="4" >4 page(s) / 1100 words</option>
+                             
+                            <option value="5" >5 page(s) / 1375 words</option>
+                             
+                            <option value="6" >6 page(s) / 1650 words</option>
+
+                             
+                            <option value="7" >7 page(s) / 1925 words</option>
+                             
+                            <option value="8" >8 page(s) / 2200 words</option>
+                             
+                            <option value="9" >9 page(s) / 2475 words</option>
+                             
+                            <option value="10" >10 page(s) / 2750 words</option>
+                             
+                            <option value="11" >11 page(s) / 3025 words</option>
+                             
+                            <option value="12" >12 page(s) / 3300 words</option>
+
+                             
+                            <option value="13" >13 page(s) / 3575 words</option>
+                             
+                            <option value="14" >14 page(s) / 3850 words</option>
+                             
+                            <option value="15" >15 page(s) / 4125 words</option>
+                             
+                            <option value="16" >16 page(s) / 4400 words</option>
+                             
+                            <option value="17" >17 page(s) / 4675 words</option>
+                             
+                            <option value="18" >18 page(s) / 4950 words</option>
+
+                             
+                            <option value="19" >19 page(s) / 5225 words</option>
+                             
+                            <option value="20" >20 page(s) / 5500 words</option>
+                             
+                            <option value="21" >21 page(s) / 5775 words</option>
+                             
+                            <option value="22" >22 page(s) / 6050 words</option>
+                             
+                            <option value="23" >23 page(s) / 6325 words</option>
+                             
+                            <option value="24" >24 page(s) / 6600 words</option>
+
+                             
+                            <option value="25" >25 page(s) / 6875 words</option>
+                             
+                            <option value="26" >26 page(s) / 7150 words</option>
+                             
+                            <option value="27" >27 page(s) / 7425 words</option>
+                             
+                            <option value="28" >28 page(s) / 7700 words</option>
+                             
+                            <option value="29" >29 page(s) / 7975 words</option>
+                             
+                            <option value="30" >30 page(s) / 8250 words</option>
+
+                             
+                            <option value="31" >31 page(s) / 8525 words</option>
+                             
+                            <option value="32" >32 page(s) / 8800 words</option>
+                             
+                            <option value="33" >33 page(s) / 9075 words</option>
+                             
+                            <option value="34" >34 page(s) / 9350 words</option>
+                             
+                            <option value="35" >35 page(s) / 9625 words</option>
+                             
+                            <option value="36" >36 page(s) / 9900 words</option>
+
+                             
+                            <option value="37" >37 page(s) / 10175 words</option>
+                             
+                            <option value="38" >38 page(s) / 10450 words</option>
+                             
+                            <option value="39" >39 page(s) / 10725 words</option>
+                             
+                            <option value="40" >40 page(s) / 11000 words</option>
+                             
+                            <option value="41" >41 page(s) / 11275 words</option>
+                             
+                            <option value="42" >42 page(s) / 11550 words</option>
+
+                             
+                            <option value="43" >43 page(s) / 11825 words</option>
+                             
+                            <option value="44" >44 page(s) / 12100 words</option>
+                             
+                            <option value="45" >45 page(s) / 12375 words</option>
+                             
+                            <option value="46" >46 page(s) / 12650 words</option>
+                             
+                            <option value="47" >47 page(s) / 12925 words</option>
+                             
+                            <option value="48" >48 page(s) / 13200 words</option>
+
+                             
+                            <option value="49" >49 page(s) / 13475 words</option>
+                             
+                            <option value="50" >50 page(s) / 13750 words</option>
+                             
+                            <option value="51" >51 page(s) / 14025 words</option>
+                             
+                            <option value="52" >52 page(s) / 14300 words</option>
+                             
+                            <option value="53" >53 page(s) / 14575 words</option>
+                             
+                            <option value="54" >54 page(s) / 14850 words</option>
+
+                             
+                            <option value="55" >55 page(s) / 15125 words</option>
+                             
+                            <option value="56" >56 page(s) / 15400 words</option>
+                             
+                            <option value="57" >57 page(s) / 15675 words</option>
+                             
+                            <option value="58" >58 page(s) / 15950 words</option>
+                             
+                            <option value="59" >59 page(s) / 16225 words</option>
+                             
+                            <option value="60" >60 page(s) / 16500 words</option>
+
+                             
+                            <option value="61" >61 page(s) / 16775 words</option>
+                             
+                            <option value="62" >62 page(s) / 17050 words</option>
+                             
+                            <option value="63" >63 page(s) / 17325 words</option>
+                             
+                            <option value="64" >64 page(s) / 17600 words</option>
+                             
+                            <option value="65" >65 page(s) / 17875 words</option>
+                             
+                            <option value="66" >66 page(s) / 18150 words</option>
+
+                             
+                            <option value="67" >67 page(s) / 18425 words</option>
+                             
+                            <option value="68" >68 page(s) / 18700 words</option>
+                             
+                            <option value="69" >69 page(s) / 18975 words</option>
+                             
+                            <option value="70" >70 page(s) / 19250 words</option>
+                             
+                            <option value="71" >71 page(s) / 19525 words</option>
+                             
+                            <option value="72" >72 page(s) / 19800 words</option>
+
+                             
+                            <option value="73" >73 page(s) / 20075 words</option>
+                             
+                            <option value="74" >74 page(s) / 20350 words</option>
+                             
+                            <option value="75" >75 page(s) / 20625 words</option>
+                             
+                            <option value="76" >76 page(s) / 20900 words</option>
+                             
+                            <option value="77" >77 page(s) / 21175 words</option>
+                             
+                            <option value="78" >78 page(s) / 21450 words</option>
+
+                             
+                            <option value="79" >79 page(s) / 21725 words</option>
+                             
+                            <option value="80" >80 page(s) / 22000 words</option>
+                             
+                            <option value="81" >81 page(s) / 22275 words</option>
+                             
+                            <option value="82" >82 page(s) / 22550 words</option>
+                             
+                            <option value="83" >83 page(s) / 22825 words</option>
+                             
+                            <option value="84" >84 page(s) / 23100 words</option>
+
+                             
+                            <option value="85" >85 page(s) / 23375 words</option>
+                             
+                            <option value="86" >86 page(s) / 23650 words</option>
+                             
+                            <option value="87" >87 page(s) / 23925 words</option>
+                             
+                            <option value="88" >88 page(s) / 24200 words</option>
+                             
+                            <option value="89" >89 page(s) / 24475 words</option>
+                             
+                            <option value="90" >90 page(s) / 24750 words</option>
+
+                             
+                            <option value="91" >91 page(s) / 25025 words</option>
+                             
+                            <option value="92" >92 page(s) / 25300 words</option>
+                             
+                            <option value="93" >93 page(s) / 25575 words</option>
+                             
+                            <option value="94" >94 page(s) / 25850 words</option>
+                             
+                            <option value="95" >95 page(s) / 26125 words</option>
+                             
+                            <option value="96" >96 page(s) / 26400 words</option>
+
+                             
+                            <option value="97" >97 page(s) / 26675 words</option>
+                             
+                            <option value="98" >98 page(s) / 26950 words</option>
+                             
+                            <option value="99" >99 page(s) / 27225 words</option>
+                             
+                            <option value="100" >100 page(s) / 27500 words</option>
+                             
+                            <option value="101" >101 page(s) / 27775 words</option>
+                             
+                            <option value="102" >102 page(s) / 28050 words</option>
+
+                             
+                            <option value="103" >103 page(s) / 28325 words</option>
+                             
+                            <option value="104" >104 page(s) / 28600 words</option>
+                             
+                            <option value="105" >105 page(s) / 28875 words</option>
+                             
+                            <option value="106" >106 page(s) / 29150 words</option>
+                             
+                            <option value="107" >107 page(s) / 29425 words</option>
+                             
+                            <option value="108" >108 page(s) / 29700 words</option>
+
+                             
+                            <option value="109" >109 page(s) / 29975 words</option>
+                             
+                            <option value="110" >110 page(s) / 30250 words</option>
+                             
+                            <option value="111" >111 page(s) / 30525 words</option>
+                             
+                            <option value="112" >112 page(s) / 30800 words</option>
+                             
+                            <option value="113" >113 page(s) / 31075 words</option>
+                             
+                            <option value="114" >114 page(s) / 31350 words</option>
+
+                             
+                            <option value="115" >115 page(s) / 31625 words</option>
+                             
+                            <option value="116" >116 page(s) / 31900 words</option>
+                             
+                            <option value="117" >117 page(s) / 32175 words</option>
+                             
+                            <option value="118" >118 page(s) / 32450 words</option>
+                             
+                            <option value="119" >119 page(s) / 32725 words</option>
+                             
+                            <option value="120" >120 page(s) / 33000 words</option>
+
+                             
+                            <option value="121" >121 page(s) / 33275 words</option>
+                             
+                            <option value="122" >122 page(s) / 33550 words</option>
+                             
+                            <option value="123" >123 page(s) / 33825 words</option>
+                             
+                            <option value="124" >124 page(s) / 34100 words</option>
+                             
+                            <option value="125" >125 page(s) / 34375 words</option>
+                             
+                            <option value="126" >126 page(s) / 34650 words</option>
+
+                             
+                            <option value="127" >127 page(s) / 34925 words</option>
+                             
+                            <option value="128" >128 page(s) / 35200 words</option>
+                             
+                            <option value="129" >129 page(s) / 35475 words</option>
+                             
+                            <option value="130" >130 page(s) / 35750 words</option>
+                             
+                            <option value="131" >131 page(s) / 36025 words</option>
+                             
+                            <option value="132" >132 page(s) / 36300 words</option>
+
+                             
+                            <option value="133" >133 page(s) / 36575 words</option>
+                             
+                            <option value="134" >134 page(s) / 36850 words</option>
+                             
+                            <option value="135" >135 page(s) / 37125 words</option>
+                             
+                            <option value="136" >136 page(s) / 37400 words</option>
+                             
+                            <option value="137" >137 page(s) / 37675 words</option>
+                             
+                            <option value="138" >138 page(s) / 37950 words</option>
+
+                             
+                            <option value="139" >139 page(s) / 38225 words</option>
+                             
+                            <option value="140" >140 page(s) / 38500 words</option>
+                             
+                            <option value="141" >141 page(s) / 38775 words</option>
+                             
+                            <option value="142" >142 page(s) / 39050 words</option>
+                             
+                            <option value="143" >143 page(s) / 39325 words</option>
+                             
+                            <option value="144" >144 page(s) / 39600 words</option>
+
+                             
+                            <option value="145" >145 page(s) / 39875 words</option>
+                             
+                            <option value="146" >146 page(s) / 40150 words</option>
+                             
+                            <option value="147" >147 page(s) / 40425 words</option>
+                             
+                            <option value="148" >148 page(s) / 40700 words</option>
+                             
+                            <option value="149" >149 page(s) / 40975 words</option>
+                             
+                            <option value="150" >150 page(s) / 41250 words</option>
+
+                             
+                            <option value="151" >151 page(s) / 41525 words</option>
+                             
+                            <option value="152" >152 page(s) / 41800 words</option>
+                             
+                            <option value="153" >153 page(s) / 42075 words</option>
+                             
+                            <option value="154" >154 page(s) / 42350 words</option>
+                             
+                            <option value="155" >155 page(s) / 42625 words</option>
+                             
+                            <option value="156" >156 page(s) / 42900 words</option>
+
+                             
+                            <option value="157" >157 page(s) / 43175 words</option>
+                             
+                            <option value="158" >158 page(s) / 43450 words</option>
+                             
+                            <option value="159" >159 page(s) / 43725 words</option>
+                             
+                            <option value="160" >160 page(s) / 44000 words</option>
+                             
+                            <option value="161" >161 page(s) / 44275 words</option>
+                             
+                            <option value="162" >162 page(s) / 44550 words</option>
+
+                             
+                            <option value="163" >163 page(s) / 44825 words</option>
+                             
+                            <option value="164" >164 page(s) / 45100 words</option>
+                             
+                            <option value="165" >165 page(s) / 45375 words</option>
+                             
+                            <option value="166" >166 page(s) / 45650 words</option>
+                             
+                            <option value="167" >167 page(s) / 45925 words</option>
+                             
+                            <option value="168" >168 page(s) / 46200 words</option>
+
+                             
+                            <option value="169" >169 page(s) / 46475 words</option>
+                             
+                            <option value="170" >170 page(s) / 46750 words</option>
+                             
+                            <option value="171" >171 page(s) / 47025 words</option>
+                             
+                            <option value="172" >172 page(s) / 47300 words</option>
+                             
+                            <option value="173" >173 page(s) / 47575 words</option>
+                             
+                            <option value="174" >174 page(s) / 47850 words</option>
+
+                             
+                            <option value="175" >175 page(s) / 48125 words</option>
+                             
+                            <option value="176" >176 page(s) / 48400 words</option>
+                             
+                            <option value="177" >177 page(s) / 48675 words</option>
+                             
+                            <option value="178" >178 page(s) / 48950 words</option>
+                             
+                            <option value="179" >179 page(s) / 49225 words</option>
+                             
+                            <option value="180" >180 page(s) / 49500 words</option>
+
+                             
+                            <option value="181" >181 page(s) / 49775 words</option>
+                             
+                            <option value="182" >182 page(s) / 50050 words</option>
+                             
+                            <option value="183" >183 page(s) / 50325 words</option>
+                             
+                            <option value="184" >184 page(s) / 50600 words</option>
+                             
+                            <option value="185" >185 page(s) / 50875 words</option>
+                             
+                            <option value="186" >186 page(s) / 51150 words</option>
+
+                             
+                            <option value="187" >187 page(s) / 51425 words</option>
+                             
+                            <option value="188" >188 page(s) / 51700 words</option>
+                             
+                            <option value="189" >189 page(s) / 51975 words</option>
+                             
+                            <option value="190" >190 page(s) / 52250 words</option>
+                             
+                            <option value="191" >191 page(s) / 52525 words</option>
+                             
+                            <option value="192" >192 page(s) / 52800 words</option>
+
+                             
+                            <option value="193" >193 page(s) / 53075 words</option>
+                             
+                            <option value="194" >194 page(s) / 53350 words</option>
+                             
+                            <option value="195" >195 page(s) / 53625 words</option>
+                             
+                            <option value="196" >196 page(s) / 53900 words</option>
+                             
+                            <option value="197" >197 page(s) / 54175 words</option>
+                             
+                            <option value="198" >198 page(s) / 54450 words</option>
+
+                             
+                            <option value="199" >199 page(s) / 54725 words</option>
+                             
+                            <option value="200" >200 page(s) / 55000 words</option>
+                                        
+                            </select>
+                        
+                      <div id="num_pg_ord" class="num_pg"></div>
+                    </td>
+                    <td>
+                        
+
+                        <input type="checkbox" name="o_interval" value="1"  onclick="javascript:doOrderFormCalculation();"/>&nbsp;<b>Single spaced</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="urgency">Urgency:</label><br>
+                            
+
+                        <select title="Paper urgency" class="big" name="urgency" onchange="javascript:doOrderFormCalculation();" onclick="javascript:doOrderFormCalculation();">
+                         <option value="15" >30 days</option>
+                        <option value="16" >6 hours</option>
+                         <option value="6" >12 hours</option>
+                         <option value="7" >24 hours</option>
+
+                         <option value="8" >48 hours</option>
+                         <option value="9" >3 days</option>
+                         <option value="10" >4 days</option>
+                         <option value="11" >5 days</option>
+                         <option value="12" >7 days</option>
+                         <option value="13" >10 days</option>
+
+                         <option value="14" >20 days</option>
+
+
+                      </select>
+                    </td>
+                    <td>
+                        <label for="style">Style:</label>
+                        
+
+                        <select class="order_input" name="writing_style" size="1" onchange="javascript:doOrderFormCalculation();" onclick="javascript:doOrderFormCalculation();">
+                            <option value="APA" >APA</option>
+
+                            <option value="MLA" >MLA</option>
+                            <option value="Turabian" >Turabian</option>
+                            <option value="Chicago" >Chicago</option>
+                            <option value="Harvard" >Harvard</option>
+                            <option value="Oxford" >Oxford</option>
+                            <option value="Vancouver" >Vancouver</option>
+
+                            <option value="CBE" >CBE</option>
+                            <option value="Other" >Other</option>
+                        </select>   
+                    </td>
+                </tr>
+
+                <tr>
+                    <!--<td>
+                        <label for="written">Written by Top 10 Writers</label>  
+                        <input type="checkbox" id="vas_per_page_0" name="vas_id[]" value="3"  onclick="doOrderFormCalculation()"/>  <b>$2.95/page</b>
+                    </td>!-->
+                    <td>
+                        <label for="academiclevel">Academic Level:</label>
+                        
+
+                            <select title="Academic level" class="big" name="academic_level" onchange="javascript:doOrderFormCalculation();" onclick="javascript:doOrderFormCalculation();">
+                             <option value="1" >High School</option>
+                             <option value="2" >Undergraduate</option>
+
+                             <option value="3" >Master</option>
+                             <option value="4" >Ph. D.</option>
+                            </select>
+                    </td>
+                    <td>
+                        <label for="cost_per_page">Cost per page:</label>                       
+
+                        <span id="cost_per_page" class="order_input3"></span>
+						
+						
+                    </td>
+
+                </tr>
+
+                <tr>
+                    
+                    <!--<td>
+                        <label for="vip">VIP support</label>
+
+                        <input type="checkbox" id="vas_per_order_1" name="vas_id[]" value="6"  onclick="doOrderFormCalculation()"/>  <b>$9.95</b>
+                    </td>!-->
+                </tr>
+
+                <tr>
+                  <td>
+                        <label for="language">Preferred language style:</label>
+                            <select class="big" name="langstyle" onchange="javascript:doOrderFormCalculation();" onclick="javascript:doOrderFormCalculation();">
+                            <option value="English (U.S.)" >English (U.S.)</option> 
+                             <option value="English (U.K.)" >English (U.K.)</option>
+                            </select>
+                  </td>
+                    
+                    <td>
+                        <label for="total">Total</label><br>
+
+                        
+                            <select class="order_input3" name="curr" onchange="javascript:doOrderFormCalculation();" onclick="javascript:doOrderFormCalculation();">
+                             <option value="1" >USD</option>
+							  </select>
+                                                   
+                            <span id="total" class="totalo"></span>$
+							<input type="hidden"  id="total" name="total" />
+                     
+                    </td>
+                </tr>
+                </table>
+
+                <table>
+                    <tr>
+                      <td width="616">
+                        <label for="input01">Order instructions </label> <br> 
+                        <span class="error"></span>
+                  <textarea id="description" class="order_tarea" name="order_description"  ></textarea>
+                      </td>
+                      <td width="61">                      </td>
+                    </tr>
+                </table>
+                <table>
+                
+
+                <tr>
+                    <td>
+                    <label for="allow_night_calls">Receive phone calls  </label>
+                    <input id="allow_night_calls" name="allow_night_calls" type="checkbox" value="allow_night_calls" size="1" checked="" />  
+                    </td>
+                   <td>
+                    <label for="allow_night_calls">I agree to terms and conditions</label>
+                    <input id="terms" name="terms" type="checkbox" value="allow_night_calls" size="1" checked="" /> 
+
+                    <input type="hidden" name="discount_percent_h" class="discount_percent_h" value="" />
+                    <input type="hidden" name="discount_h" value="" />                      
+                    <input type="hidden" name="lblCustomerSavings" value="" /> 
+
+                <!--<label for="promo">Discount code:</label>!-->
+
+                <input type="hidden" class="discount_code" name="discount_code" />
+
+                <!-- <a title="click to use a discount code" href="javascript:void(0)" onClick="javascript:doDiscount();" >click</a>!-->
+                  </td>
+                </tr>
+
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                            
+                
+
+<!--<div class="brdata"><small><i>Enter the discount code and click Use Code to verify.</i></small><br />Please, be aware that membership discounts are not applied to orders under $30.00</div>!-->
+              
+
+
+        
+<input type="hidden" name="0bb6c36d0203642ba42e79df168efa3a" value="MGJiNmMzNmQwMjAzNjQyYmE0MmU3OWRmMTY4ZWZhM2E=" />
+<input type="hidden" name="29cece43ba2d4bcaea8c78eb02aea395" value="MjljZWNlNDNiYTJkNGJjYWVhOGM3OGViMDJhZWEzOTU=" />
+<input type="hidden" name="ee52948c809e658a2e2bfd66f90aef6b" value="ZWU1Mjk0OGM4MDllNjU4YTJlMmJmZDY2ZjkwYWVmNmI=" />
+<input type="hidden" name="MTIuOTUYGREXGHNMKJGT23467GGFDSSSbbbbbIOK" value="" />
+<input type="hidden" name="MMNBGFREWQASCXZSOPJHGVNMTIuOTU" class="MMNBGFREWQASCXZSOPJHGVNMTIuOTU" value="" />
+
+
+</table>
+
+                    
+                    <tfoot>
+        <input value="price_label" name="usd_total"  id="usd_total" type="hidden">
+        <input value="PREVIEW ORDER" type="submit" name="preview" onClick="return validateField();" class="btn btn-primary"> 
+            
+                    </tfoot>
+
+
+
+                </table>
+             </div> 
+        </form>
+     
+    
+          
+
+
+    </div>
+    </div>
+    
+
+<div id="footer">
+
+<p>&copy;academicessaywritings@2013</p>
+</div><!--end footer div -->
+
+</body>
+</html>
+
+ 

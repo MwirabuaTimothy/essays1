@@ -1,8 +1,11 @@
 <IfModule mod_rewrite.c>
-    Options -MultiViews
+    # Use PHP 5.4
+    AddType application/x-httpd-php54 .php
+    
+    Options -MultiViews +FollowSymLinks
     RewriteEngine On
-
-	RewriteCond %{REQUEST_FILENAME} !-d
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>

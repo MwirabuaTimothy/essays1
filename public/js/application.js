@@ -1,80 +1,156 @@
-/**
- *
- *@Author - Eugene Mutai
- *@Twitter - JheneKnights
- *
- * Date: 9/12/13
- * Time: 2:56 PM
- * Description:
- *
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://www.opensource.org/licenses/mit-license.php
- * http://www.opensource.org/licenses/gpl-2.0.php
- *
- * Copyright (C) 2013
- * @Version -
- */
-
-var orderModel = {
-    title: ko.observable('').extend({
-        required: true,
-        minLength: 1,
-        pattern: {
-            params: /[\w.-]{1,}/, //jhene-knights
-            message: "Title of your project cannot be blank."
-        }
-    }),
-    pagesorwords: ko.observable('').extend({
-        required: true,
-        //digit: true,
-        pattern: {
-            params: /^(\+)?[0-9.-]{1,}/,
-            message: "invalid input, enter only numerical values."
-        }
-    })
-};
-
-//Validation of all the valid fields
-orderModel.allisvalid = ko.computed(function() {
-    var validation = ko.validatedObservable(orderModel);
-    return validation.isValid();
-}, orderModel);
-
-//Will take care of the Sidebar login validation
-var sideBarModel = {
-    sidebarEmailAddress: ko.observable('').extend({
-        required: true,
-        pattern: {
-            params: /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/, //jhene-knights
-            message: "Invalid email address."
-        }
-    }),
-    sidebarPassword: ko.observable('').extend({
-        required: true,
-        minLength: 6
-    }),
-    sidebarAllisvalid: ko.computed(function() {
-        var validation = ko.validatedObservable(this);
-        var bool = validation.isValid();
-        return bool;
-    }, this)
-};
-
 //initialise App
-App = Ember.Application.create();
+App = Ember.Application.create({
+    LOG_TRANSITIONS: true
+});
+
+App.Router.reopen({
+    // location: 'history' //routes on direct urls, not hashes 
+    // , rootURL: '/app/' // serve the app on domain.com/app
+});
 
 App.Router.map(function() {
+    // rootURL: '/app';
     this.route('introduction');
     this.route('about-us');
     this.route('services');
     this.route('contact-us');
     this.route('my-order');
+    this.route('faq');
+    this.route('sign-in');
+    this.route('sign-up');
+    this.route('popup');
 });
+
+App.initializer({
+    name: 'Inject Store',
+    initialize: function(container, application) {
+        container.injection('application:main', 'store', 'store:main');
+    }
+});
+
+App.ApplicationRoute = Ember.Route.extend({
+    events: {
+        /** BASIC PAGE TRANSITIONS ***/
+          introduction: function() {
+            this.transitionToAnimated('introduction', {main: 'fade'})
+        }
+        , aboutus: function() {
+            this.transitionToAnimated('about-us', {main: 'fade'})
+        }
+        , contactus: function() {
+            this.transitionToAnimated('contact-us', {main: 'flip'})
+        }
+        , myorder: function() {
+            this.transitionToAnimated('my-order', {main: 'fade'});
+        }
+        , ourservices: function() {
+            this.transitionToAnimated('services', {main: 'fade'})
+        }
+        /*** EMBER APP USES ***/
+        , checklogin: function(path) {
+            if(essays.storeThisSmartly("essaysUser")) {
+                this.transitionToAnimated(path, {main: "fade"})
+            }else{
+                this.transitionToAnimated('sign_up', {main: 'flip'})
+            }
+        }
+        , faq: function() {
+            this.transitionToAnimated('faq', {main: 'fade'})
+        }
+        
+        , signin: function() {
+             // this.render({ outlet: 'auth' });
+            this.transitionToAnimated('sign-in', { main: 'slide' });
+        }
+        , signup: function() {
+            this.transitionToAnimated('sign-up', { main: 'slide' });
+        }
+        // , renderTemplate: function() {
+        //     this.render('sign-in', {   // the template to render
+        //         into: 'index',          // the template to render into
+        //         outlet: 'auth',       // the name of the outlet in that template
+        //         controller: 'SignInController'  // the controller to use for the template
+        //     });
+        // }
+
+        , popst: function(param) {
+            // this.transitionToAnimated('popup', { main: 'flip' }, param);
+            var modalView = this.container.lookup('view:modal')
+            modalView.append();
+        }
+    }
+});
+ 
+App.PopupView = Ember.View.extend({
+    layoutName: 'modal',
+    closeModal: function(){
+        this.remove();
+    }
+});
+    
+// App.PopupRoute = Ember.Route.extend({
+//    model: function(){
+//     // return this.;
+//    }    
+// })
+// App.ApplicationController = Ember.ObjectController.extend({
+//     , signin: function() {
+//             this.render({ outlet: 'auth' });
+//     }
+//     , signup: function() {
+//         this.render({ outlet: 'auth' });
+//     }
+// });
+
+// this.route('introduction');
+// this.route('about-us');
+// this.route('services');
+// this.route('contact-us');
+// this.route('my-order');
+// this.route('sign-in');
+// this.route('sign-up');
+
+// Animated Transitions need explicit view declarations
+App.ApplicationView = Ember.View.extend({classNames: ['application']});
+App.IntroductionView = Ember.View.extend();
+App.AboutUsView = Ember.View.extend();
+App.ServicesView = Ember.View.extend();
+App.ContactUsView = Ember.View.extend();
+App.MyOrderView = Ember.View.extend();
+App.SignInView = Ember.View.extend();
+App.SignUpView = Ember.View.extend();
+App.OrdersView = Ember.View.extend();
 
 App.IndexRoute = Ember.Route.extend({
     redirect: function() {
-        this.transitionToAnimated('introduction', {main: 'slideLeft'})
+        this.transitionToAnimated('introduction', {main: 'slideRight'})
     }
+});
+
+programmers =  [
+    {firstName: "Yehuda", id: 1},
+    {firstName: "Tom",    id: 2}
+  ]
+App.SignUpController = Ember.Controller.extend({
+    programmers: function(){
+        return programmers;
+    }
+    ,  currentProgrammer: {
+    id: 2
+  }
+});
+
+App.SignUpRoute = Ember.Route.extend({
+    // afterModel: function() {
+    //     setTimeout(function() {
+    //         ko.applyBindings(signUpModel, document.querySelector('#signup-form'))
+    //     }, 10)
+    // }
+});
+
+
+App.MyOrderController = Ember.Controller.extend({
+  names: ["Yehuda", "Tom", "Amazing", "Grace"]
 });
 
 App.MyOrderRoute = Ember.Route.extend({
@@ -86,13 +162,23 @@ App.MyOrderRoute = Ember.Route.extend({
             $('option').each(function() {
                 $(this).attr('value', function() { return $(this).text() });
             });
-            ko.applyBindings(orderModel, document.querySelector('.myorder form'));
+            // ko.applyBindings(orderModel, document.querySelector('.myorder form'));
 
             //Setting up Multiple file upload JS
             var dz = new Dropzone('#my-dropzone', {
+                // url: "./xfiles",
                 paramName: "files",
                 uploadMultiple: true,
+                maxFilesize: 10,
+                // dictFileTooBig: "go to hell!",
+                thumbnailWidth: "80",
+                thumbnailHeight: "80",
+                clickable: true,
+                addRemoveLinks: true,
+                maxFiles:5,
+                parallelUploads:5,
                 autoProcessQueue: false,
+                dictCancelUpload: "Cancel",
                 init: function() {
                     var submit  = $('#submitOrder');
                     var dz = this;
@@ -136,10 +222,29 @@ App.MyOrderRoute = Ember.Route.extend({
                     console.log("Initialised dropzone upload plugin. --> " + dz.getQueuedFiles().length);
                 }
             });
+      // $("#btnDropzone").click(function () {
+
+      //       var fileCount = myDropzone.files.length;
+      //       alert(fileCount);
+      //       alert(fileCount % myDropzone.options.parallelUploads);
+      //       var loopsCount = fileCount / myDropzone.options.parallelUploads;
+
+      //       if (fileCount % myDropzone.options.parallelUploads != 0) {
+      //           loopsCount = loopsCount + 1;
+      //       }
+
+      //       alert(loopsCount);
+      //       for (var i = 0; i < loopsCount ; i++) {
+      //           alert(i);
+      //           myDropzone.processQueue();
+      //       }
+
+      //   });
 
             //1st submission, for attachment uploads
             $('#submitAttach').on('click', function() {
                 var data = {}, orderdata, good = orderModel.allisvalid(), empty = [];
+                // var data = {}, orderdata, good = [];
                 if(good) {
                     orderdata = $('[data-part="order"]').map(function() {
                         data[$(this).attr('id')] = $(this).val();
@@ -161,39 +266,6 @@ App.MyOrderRoute = Ember.Route.extend({
             })
         }, 10); //run on 100 milliseconds
     }
-});
-
-App.ApplicationRoute = Ember.Route.extend({
-    actions: {
-        /** BASIC PAGE TRANSITIONS ***/
-        introduction: function() {
-            this.transitionToAnimated('introduction', {main: 'fade'})
-        },
-        aboutus: function() {
-            this.transitionToAnimated('about-us', {main: 'fade'})
-        },
-        contactus: function() {
-            this.transitionToAnimated('contact-us', {main: 'flip'})
-        },
-        myorder: function() {
-            this.transitionToAnimated('my-order', {main: 'fade'});
-        },
-        ourservices: function() {
-            this.transitionToAnimated('services', {main: 'fade'})
-        },
-        /*** EMBER APP USES ***/
-        checklogin: function(path) {
-            if(essays.storeThisSmartly("essaysUser")) {
-                this.transitionToAnimated(path, {main: "slideLeft"})
-            }else{
-                this.transitionToAnimated('sign-up', {main: 'slideRight'})
-            }
-        }
-    }
-});
-
-App.ApplicationView = Ember.View.extend({
-    classNames: ['application']
 });
 
 var essays = {
@@ -222,5 +294,3 @@ var essays = {
         this.storeThisSmartly(key, false);
     }
 }
-
-

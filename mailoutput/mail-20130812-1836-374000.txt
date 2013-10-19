@@ -1,0 +1,26 @@
+To: techytimo@gmail.com
+Subject: New WordPress Site
+Date: Mon, 12 Aug 2013 18:36:03 +0000
+Return-Path: wordpress@localhost
+From: WordPress <wordpress@localhost>
+Message-ID: <53ff86e86858c1c375817773fa353fdc@localhost>
+X-Priority: 3
+X-Mailer: PHPMailer 5.2.1 (http://code.google.com/a/apache-extras.org/p/phpmailer/)
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset="UTF-8"
+
+Your new WordPress site has been successfully set up at:
+
+http://localhost:8000/blog
+
+You can log in to the administrator account with the following information:
+
+Username: admin
+Password: The password you chose during the install.
+
+We hope you enjoy your new site. Thanks!
+
+--The WordPress Team
+http://wordpress.org/
+
