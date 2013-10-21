@@ -226,7 +226,7 @@
                     <select name="subject_area" id="subject" title="Subject area" 
                     onchange="javascript:doOrderFormCalculation();">
                         {{#each subject_area_sel}}
-                        <option value={{ this.v }} >{{ this.n }}</option>
+                            <option value={{ this.v }} >{{ this.n }}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -236,7 +236,7 @@
                     <select name="document_type" id="document" title="type of document" 
                      onchange="javascript:doOrderFormCalculation();" >
                         {{#each opt in document_type_sel}}
-                            {{ opt }}
+                            <option value="{{ opt.v }}" >{{ opt.n }}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -246,7 +246,7 @@
                     <select name="academic_level" id="academiclvl" title="Academic Level" 
                     onchange="javascript:doOrderFormCalculation();">
                         {{#each opt in academic_level_sel}}
-                        <option value="{{ opt.v }}" >{{ opt.n }}</option>
+                            <option value="{{ opt.v }}" >{{ opt.n }}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -256,7 +256,7 @@
                     <select name="urgency" id="urgency" title="Paper Urgency"
                     onchange="javascript:doOrderFormCalculation();">
                         {{#each opt in urgency_sel}}
-                        <option value="{{ opt.v }}" >{{ opt.n }}</option>
+                            <option value="{{ opt.v }}" >{{ opt.n }}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -265,7 +265,7 @@
                     <h4>Writting Style: </h4>
                     <select name="writing_style" id="writtingstyle" title="Writting Style">
                         {{#each opt in writing_style_sel}}
-                        <option value="{{ opt.v }}" >{{ opt.n }}</option>
+                            <option value="{{ opt.v }}" >{{ opt.n }}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -280,7 +280,7 @@
                     <h4>Prefered language: </h4>
                     <select name="langstyle" id="langstyle">
                         {{#each opt in langstyle_sel}}
-                        <option value="{{ opt.v }}" >{{ opt.n }}</option>
+                            <option value="{{ opt.v }}" >{{ opt.n }}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -290,7 +290,7 @@
                     <select name="numpages" id="pgwdnumber" title="Number of pages" style="width: 170px;" class="big" 
                     onchange="javascript:doOrderFormCalculation();">
                         {{#each opt in numpages_sel}}
-                        <option value="{{ opt.v }}" >{{ opt.n }}</option>
+                            <option value="{{ opt.v }}" >{{ opt.n }}</option>
                         {{/each}}
                     </select>
                     <div id="num_pg_ord" class="num_pg"></div>
@@ -306,7 +306,7 @@
                     <select name="curr" style="width: 100px;" 
                     onchange="javascript:doOrderFormCalculation();">
                         {{#each opt in curr_sel}}
-                        <option value="{{ opt.v }}" >{{ opt.n }}</option>
+                            <option value="{{ opt.v }}" >{{ opt.n }}</option>
                         {{/each}}
                     </select>
                 </div>
