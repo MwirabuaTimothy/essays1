@@ -78,7 +78,7 @@ App.ApplicationRoute = Ember.Route.extend({
             var modalView = this.container.lookup('view:popup')
             modalView.append();
             // this.transitionToAnimated('popup', { main: 'flip' });
-            console.log(categorydata);
+            // console.log(categorydata);
         }
         // ,  openModal: function() {
         //   var modalView = this.container.lookup('view:modal')
@@ -159,8 +159,12 @@ App.SignUpRoute = Ember.Route.extend({
 });
 
 
-
+// var curr_sel = {};
 App.MyOrderRoute = Ember.Route.extend({
+    beforeModel: function(){
+        // curr_sel = curr_sel;
+        console.log(curr_sel);
+    },
     afterModel: function() {
         //instantiating the google select plugin
         setTimeout(function() {

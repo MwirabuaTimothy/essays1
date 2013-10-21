@@ -196,88 +196,88 @@ var servicesJSON = [{
 
 var subject_area_sel = [
     {v:"10", n:"Art"},
-    {v:"12", n:"&nbsp;&nbsp;Architecture"},
-    {v:"15", n:"&nbsp;&nbsp;Dance"},
-    {v:"17", n:"&nbsp;&nbsp;Design Analysis"},
-    {v:"13", n:"&nbsp;&nbsp;Drama"},
-    {v:"16", n:"&nbsp;&nbsp;Movies"},
+    {v:"12", n:"Architecture"},
+    {v:"15", n:"Dance"},
+    {v:"17", n:"Design Analysis"},
+    {v:"13", n:"Drama"},
+    {v:"16", n:"Movies"},
 
-    {v:"18", n:"&nbsp;&nbsp;Music"},
-    {v:"11", n:"&nbsp;&nbsp;Paintings"},
-    {v:"14", n:"&nbsp;&nbsp;Theatre"},
+    {v:"18", n:"Music"},
+    {v:"11", n:"Paintings"},
+    {v:"14", n:"Theatre"},
     {v:"112", n:"Biology"},
     {v:"52", n:"Business"},
     {v:"111", n:"Chemistry"},
 
     {v:"102", n:"Communications and Media"},
-    {v:"105", n:"&nbsp;&nbsp;Advertising"},
-    {v:"107", n:"&nbsp;&nbsp;Communication Strategies"},
-    {v:"103", n:"&nbsp;&nbsp;Journalism"},
-    {v:"104", n:"&nbsp;&nbsp;Public Relations"},
+    {v:"105", n:"Advertising"},
+    {v:"107", n:"Communication Strategies"},
+    {v:"103", n:"Journalism"},
+    {v:"104", n:"Public Relations"},
     {v:"115", n:"Creative writing"},
 
     {v:"53", n:"Economics"},
-    {v:"60", n:"&nbsp;&nbsp;Accounting"},
-    {v:"61", n:"&nbsp;&nbsp;Case Study"},
-    {v:"58", n:"&nbsp;&nbsp;Company Analysis"},
-    {v:"62", n:"&nbsp;&nbsp;E-Commerce"},
-    {v:"59", n:"&nbsp;&nbsp;Finance"},
+    {v:"60", n:"Accounting"},
+    {v:"61", n:"Case Study"},
+    {v:"58", n:"Company Analysis"},
+    {v:"62", n:"E-Commerce"},
+    {v:"59", n:"Finance"},
 
-    {v:"57", n:"&nbsp;&nbsp;Investment"},
-    {v:"63", n:"&nbsp;&nbsp;Logistics"},
-    {v:"64", n:"&nbsp;&nbsp;Trade"},
+    {v:"57", n:"Investment"},
+    {v:"63", n:"Logistics"},
+    {v:"64", n:"Trade"},
     {v:"87", n:"Education"},
-    {v:"93", n:"&nbsp;&nbsp;Application Essay"},
-    {v:"89", n:"&nbsp;&nbsp;Education Theories"},
+    {v:"93", n:"Application Essay"},
+    {v:"89", n:"Education Theories"},
 
-    {v:"88", n:"&nbsp;&nbsp;Pedagogy"},
-    {v:"90", n:"&nbsp;&nbsp;Teacher`s Career"},
+    {v:"88", n:"Pedagogy"},
+    {v:"90", n:"Teacher`s Career"},
     {v:"67", n:"Engineering"},
     {v:"9", n:"English"},
     {v:"24", n:"Ethics"},
     {v:"36", n:"History"},
 
-    {v:"38", n:"&nbsp;&nbsp;African-American Studies"},
-    {v:"37", n:"&nbsp;&nbsp;American History"},
-    {v:"42", n:"&nbsp;&nbsp;Asian Studies"},
-    {v:"41", n:"&nbsp;&nbsp;Canadian Studies"},
-    {v:"44", n:"&nbsp;&nbsp;East European Studies"},
-    {v:"45", n:"&nbsp;&nbsp;Holocaust"},
+    {v:"38", n:"African-American Studies"},
+    {v:"37", n:"American History"},
+    {v:"42", n:"Asian Studies"},
+    {v:"41", n:"Canadian Studies"},
+    {v:"44", n:"East European Studies"},
+    {v:"45", n:"Holocaust"},
 
-    {v:"40", n:"&nbsp;&nbsp;Latin-American Studies"},
-    {v:"39", n:"&nbsp;&nbsp;Native-American Studies"},
-    {v:"43", n:"&nbsp;&nbsp;West European Studies"},
+    {v:"40", n:"Latin-American Studies"},
+    {v:"39", n:"Native-American Studies"},
+    {v:"43", n:"West European Studies"},
     {v:"47", n:"Law"},
-    {v:"49", n:"&nbsp;&nbsp;Criminology"},
-    {v:"48", n:"&nbsp;&nbsp;Legal Issues"},
+    {v:"49", n:"Criminology"},
+    {v:"48", n:"Legal Issues"},
 
     {v:"7", n:"Linguistics"},
     {v:"2", n:"Literature"},
-    {v:"4", n:"&nbsp;&nbsp;American Literature"},
-    {v:"5", n:"&nbsp;&nbsp;Antique Literature"},
-    {v:"6", n:"&nbsp;&nbsp;Asian Literature"},
-    {v:"3", n:"&nbsp;&nbsp;English Literature"},
+    {v:"4", n:"American Literature"},
+    {v:"5", n:"Antique Literature"},
+    {v:"6", n:"Asian Literature"},
+    {v:"3", n:"English Literature"},
 
-    {v:"116", n:"&nbsp;&nbsp;Shakespeare Studies"},
+    {v:"116", n:"Shakespeare Studies"},
     {v:"54", n:"Management"},
     {v:"56", n:"Marketing"},
     {v:"51", n:"Mathematics"},
     {v:"94", n:"Medicine and Health"},
-    {v:"99", n:"&nbsp;&nbsp;Alternative Medicine"},
+    {v:"99", n:"Alternative Medicine"},
 
-    {v:"97", n:"&nbsp;&nbsp;Healthcare"},
-    {v:"101", n:"&nbsp;&nbsp;Nursing"},
-    {v:"95", n:"&nbsp;&nbsp;Nutrition"},
-    {v:"100", n:"&nbsp;&nbsp;Pharmacology"},
-    {v:"96", n:"&nbsp;&nbsp;Sport"},
+    {v:"97", n:"Healthcare"},
+    {v:"101", n:"Nursing"},
+    {v:"95", n:"Nutrition"},
+    {v:"100", n:"Pharmacology"},
+    {v:"96", n:"Sport"},
     {v:"78", n:"Nature"},
 
-    {v:"85", n:"&nbsp;&nbsp;Agricultural Studies"},
-    {v:"113", n:"&nbsp;&nbsp;Anthropology"},
-    {v:"86", n:"&nbsp;&nbsp;Astronomy"},
-    {v:"83", n:"&nbsp;&nbsp;Environmental Issues"},
-    {v:"79", n:"&nbsp;&nbsp;Geography"},
-    {v:"80", n:"&nbsp;&nbsp;Geology"},
+    {v:"85", n:"Agricultural Studies"},
+    {v:"113", n:"Anthropology"},
+    {v:"86", n:"Astronomy"},
+    {v:"83", n:"Environmental Issues"},
+    {v:"79", n:"Geography"},
+    {v:"80", n:"Geology"},
 
     {v:"28", n:"Philosophy"},
     {v:"110", n:"Physics"},
@@ -287,13 +287,13 @@ var subject_area_sel = [
     {v:"22", n:"Sociology"},
 
     {v:"65", n:"Technology"},
-    {v:"71", n:"&nbsp;&nbsp;Aeronautics"},
-    {v:"70", n:"&nbsp;&nbsp;Aviation"},
-    {v:"72", n:"&nbsp;&nbsp;Computer Science"},
-    {v:"73", n:"&nbsp;&nbsp;Internet"},
-    {v:"75", n:"&nbsp;&nbsp;IT Management"},
+    {v:"71", n:"Aeronautics"},
+    {v:"70", n:"Aviation"},
+    {v:"72", n:"Computer Science"},
+    {v:"73", n:"Internet"},
+    {v:"75", n:"IT Management"},
 
-    {v:"77", n:"&nbsp;&nbsp;Web Design"},
+    {v:"77", n:"Web Design"},
     {v:"114", n:"Tourism"}
 ];
 
@@ -618,10 +618,23 @@ var numpages_sel = [
     {v:"200", n:"200 pages/55000 words"},                    
 ];
 
-var curr_sel = [
+var curr_sel = {"bindings": [
     {v:"1", n:"USD"},
     {v:"2", n:"GBP"},
     {v:"3", n:"CAD"},
     {v:"4", n:"AUD"},
     {v:"5", n:"EUR"}
-];
+]};
+// curr_sel = Ember.A([
+//     Ember.Object.create({v:"1", n:"USD"}),
+//     Ember.Object.create({v:"2", n:"GBP"}),
+//     Ember.Object.create({v:"3", n:"CAD"}),
+//     Ember.Object.create({v:"4", n:"AUD"}),
+//     Ember.Object.create({v:"5", n:"EUR"})
+//     ]);
+
+// $.each(subject_area_sel, function(index, value) {
+//     console.log('<option value=\"' + value.v + '\">' + value.n +'</option>');
+// });
+
+// {{view Ember.Select contentBinding="" valueBinding="" }}

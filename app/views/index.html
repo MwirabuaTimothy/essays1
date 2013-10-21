@@ -226,7 +226,7 @@
                     <select name="subject_area" id="subject" title="Subject area" 
                     onchange="javascript:doOrderFormCalculation();">
                         {{#each subject_area_sel}}
-                            <option value="{{ this.v }}" >{{ this.n }}</option>
+                            <option value={{ this.v }} >{{ this.n }}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -238,7 +238,7 @@
                         {{#each opt in document_type_sel}}
                             <option value="{{ opt.v }}" >{{ opt.n }}</option>
                         {{/each}}
-                    </select>                    
+                    </select>
                 </div>
 
                 <div class="options">
@@ -305,11 +305,11 @@
                     <h4>Choise of currency</h4>
                     <select name="curr" style="width: 100px;" 
                     onchange="javascript:doOrderFormCalculation();">
-                        {{#each opt in curr_sel.bindings}}
-                            <option value="{{ opt.v }}" >{{ opt.n }}</option>
+                        {{#each curr_sel}}
+                            <option value="{{ v }}" >{{ n }}</option>
                         {{/each}}
                     </select>
-                    </div>
+                </div>
                 <div class="options">
                     <label for="cost_per_page">Cost per page:</label>                       
                     <span id="cost_per_page" class="order_input3"></span>
