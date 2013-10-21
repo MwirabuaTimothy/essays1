@@ -193,3 +193,435 @@ var servicesJSON = [{
             {st: 'Research Summary', desc: Essay_Writing}
         ]
     }];
+
+var subject_area_sel = [
+    {v:"10", n:"Art"},
+    {v:"12", n:"&nbsp;&nbsp;Architecture"},
+    {v:"15", n:"&nbsp;&nbsp;Dance"},
+    {v:"17", n:"&nbsp;&nbsp;Design Analysis"},
+    {v:"13", n:"&nbsp;&nbsp;Drama"},
+    {v:"16", n:"&nbsp;&nbsp;Movies"},
+
+    {v:"18", n:"&nbsp;&nbsp;Music"},
+    {v:"11", n:"&nbsp;&nbsp;Paintings"},
+    {v:"14", n:"&nbsp;&nbsp;Theatre"},
+    {v:"112", n:"Biology"},
+    {v:"52", n:"Business"},
+    {v:"111", n:"Chemistry"},
+
+    {v:"102", n:"Communications and Media"},
+    {v:"105", n:"&nbsp;&nbsp;Advertising"},
+    {v:"107", n:"&nbsp;&nbsp;Communication Strategies"},
+    {v:"103", n:"&nbsp;&nbsp;Journalism"},
+    {v:"104", n:"&nbsp;&nbsp;Public Relations"},
+    {v:"115", n:"Creative writing"},
+
+    {v:"53", n:"Economics"},
+    {v:"60", n:"&nbsp;&nbsp;Accounting"},
+    {v:"61", n:"&nbsp;&nbsp;Case Study"},
+    {v:"58", n:"&nbsp;&nbsp;Company Analysis"},
+    {v:"62", n:"&nbsp;&nbsp;E-Commerce"},
+    {v:"59", n:"&nbsp;&nbsp;Finance"},
+
+    {v:"57", n:"&nbsp;&nbsp;Investment"},
+    {v:"63", n:"&nbsp;&nbsp;Logistics"},
+    {v:"64", n:"&nbsp;&nbsp;Trade"},
+    {v:"87", n:"Education"},
+    {v:"93", n:"&nbsp;&nbsp;Application Essay"},
+    {v:"89", n:"&nbsp;&nbsp;Education Theories"},
+
+    {v:"88", n:"&nbsp;&nbsp;Pedagogy"},
+    {v:"90", n:"&nbsp;&nbsp;Teacher`s Career"},
+    {v:"67", n:"Engineering"},
+    {v:"9", n:"English"},
+    {v:"24", n:"Ethics"},
+    {v:"36", n:"History"},
+
+    {v:"38", n:"&nbsp;&nbsp;African-American Studies"},
+    {v:"37", n:"&nbsp;&nbsp;American History"},
+    {v:"42", n:"&nbsp;&nbsp;Asian Studies"},
+    {v:"41", n:"&nbsp;&nbsp;Canadian Studies"},
+    {v:"44", n:"&nbsp;&nbsp;East European Studies"},
+    {v:"45", n:"&nbsp;&nbsp;Holocaust"},
+
+    {v:"40", n:"&nbsp;&nbsp;Latin-American Studies"},
+    {v:"39", n:"&nbsp;&nbsp;Native-American Studies"},
+    {v:"43", n:"&nbsp;&nbsp;West European Studies"},
+    {v:"47", n:"Law"},
+    {v:"49", n:"&nbsp;&nbsp;Criminology"},
+    {v:"48", n:"&nbsp;&nbsp;Legal Issues"},
+
+    {v:"7", n:"Linguistics"},
+    {v:"2", n:"Literature"},
+    {v:"4", n:"&nbsp;&nbsp;American Literature"},
+    {v:"5", n:"&nbsp;&nbsp;Antique Literature"},
+    {v:"6", n:"&nbsp;&nbsp;Asian Literature"},
+    {v:"3", n:"&nbsp;&nbsp;English Literature"},
+
+    {v:"116", n:"&nbsp;&nbsp;Shakespeare Studies"},
+    {v:"54", n:"Management"},
+    {v:"56", n:"Marketing"},
+    {v:"51", n:"Mathematics"},
+    {v:"94", n:"Medicine and Health"},
+    {v:"99", n:"&nbsp;&nbsp;Alternative Medicine"},
+
+    {v:"97", n:"&nbsp;&nbsp;Healthcare"},
+    {v:"101", n:"&nbsp;&nbsp;Nursing"},
+    {v:"95", n:"&nbsp;&nbsp;Nutrition"},
+    {v:"100", n:"&nbsp;&nbsp;Pharmacology"},
+    {v:"96", n:"&nbsp;&nbsp;Sport"},
+    {v:"78", n:"Nature"},
+
+    {v:"85", n:"&nbsp;&nbsp;Agricultural Studies"},
+    {v:"113", n:"&nbsp;&nbsp;Anthropology"},
+    {v:"86", n:"&nbsp;&nbsp;Astronomy"},
+    {v:"83", n:"&nbsp;&nbsp;Environmental Issues"},
+    {v:"79", n:"&nbsp;&nbsp;Geography"},
+    {v:"80", n:"&nbsp;&nbsp;Geology"},
+
+    {v:"28", n:"Philosophy"},
+    {v:"110", n:"Physics"},
+    {v:"29", n:"Political Science"},
+    {v:"21", n:"Psychology"},
+    {v:"108", n:"Religion and Theology"},
+    {v:"22", n:"Sociology"},
+
+    {v:"65", n:"Technology"},
+    {v:"71", n:"&nbsp;&nbsp;Aeronautics"},
+    {v:"70", n:"&nbsp;&nbsp;Aviation"},
+    {v:"72", n:"&nbsp;&nbsp;Computer Science"},
+    {v:"73", n:"&nbsp;&nbsp;Internet"},
+    {v:"75", n:"&nbsp;&nbsp;IT Management"},
+
+    {v:"77", n:"&nbsp;&nbsp;Web Design"},
+    {v:"114", n:"Tourism"}
+];
+
+
+var document_type_sel = [
+    {v:"1", n:"Essay"},
+    {v:"2", n:"Term Paper"},
+    {v:"3", n:"Research Paper"},
+    {v:"4", n:"Coursework"},
+    {v:"5", n:"Book Report"},
+    {v:"6", n:"Book Review"},
+    {v:"7", n:"Movie Review"},
+    {v:"8", n:"Dissertation"},
+    {v:"9", n:"Thesis"},
+    {v:"10", n:"Thesis Proposal"},
+    {v:"11", n:"Research Proposal"},
+    {v:"12", n:"Dissertation Chapter - Abstract"},
+    {v:"13", n:"Dissertation Chapter - Introduction Chapter"},
+    {v:"14", n:"Dissertation Chapter - Literature Review"},
+    {v:"15", n:"Dissertation Chapter - Methodology"},
+    {v:"16", n:"Dissertation Chapter - Results"},
+    {v:"17", n:"Dissertation Chapter - Discussion"},
+    {v:"18", n:"Dissertation Services - Editing"},
+    {v:"19", n:"Dissertation Services - Proofreading"},
+    {v:"20", n:"Formatting"},
+    {v:"21", n:"Admission Services - Admission Essay"},
+    {v:"22", n:"Admission Services - Scholarship Essay"},
+    {v:"23", n:"Admission Services - Personal Statement"},
+    {v:"24", n:"Admission Services - Editing"},
+    {v:"25", n:"Editing"},
+    {v:"26", n:"Proofreading"},
+    {v:"27", n:"Case Study"},
+    {v:"28", n:"Lab Report"},
+    {v:"29", n:"Speech Presentation"},
+    {v:"30", n:"Math Problem"},
+    {v:"31", n:"Article"},
+    {v:"32", n:"Article Critique"},
+    {v:"33", n:"Annotated Bibliography"},
+    {v:"34", n:"Reaction Paper"},
+    {v:"35", n:"PowerPoint Presentation"},
+    {v:"36", n:"Statistics Project"},
+    {v:"37", n:"Multiple Choice Questions (None-Time-Framed)"},
+    {v:"38", n:"Other (Not listed)"}
+];
+
+
+var academic_level_sel = [
+    {v:"1", n:"High School"},
+    {v:"2", n:"Undergraduate"},
+    {v:"3", n:"Master"},
+    {v:"4", n:"Ph. D."}
+];
+
+
+var urgency_sel = [
+    {v:"15", n:"30 days"},
+    {v:"16", n:"6 hours"},
+    {v:"6", n:"12 hours"},
+    {v:"7", n:"24 hours"},
+    {v:"8", n:"48 hours"},
+    {v:"9", n:"3 days"},
+    {v:"10", n:"4 days"},
+    {v:"11", n:"5 days"},
+    {v:"12", n:"7 days"},
+    {v:"13", n:"10 days"},
+    {v:"14", n:"20 days"}
+];
+
+
+var writing_style_sel = [
+    {v:"APA", n:"APA"},
+    {v:"MLA", n:"MLA"},
+    {v:"Turabian", n:"Turabian"},
+    {v:"Chicago", n:"Chicago"},
+    {v:"Harvard", n:"Harvard"},
+    {v:"Oxford", n:"Oxford"},
+    {v:"Vancouver", n:"Vancouver"},
+    {v:"CBE", n:"CBE"},
+    {v:"Other", n:"Other"}
+];
+
+
+var langstyle_sel = [
+    {v:"English (U.S.)", n:"English (U.S.)"},
+    {v:"English (U.K.)", n:"English (U.K.)"}
+];
+
+
+var numpages_sel = [
+    {v:"1", n:"1 page/275 words"},                        
+    {v:"2", n:"2 pages/550 words"},
+                        
+    {v:"3", n:"3 pages/825 words"},                        
+    {v:"4", n:"4 pages/1100 words"},                        
+    {v:"5", n:"5 pages/1375 words"},                        
+    {v:"6", n:"6 pages/1650 words"},                        
+    {v:"7", n:"7 pages/1925 words"},                        
+    {v:"8", n:"8 pages/2200 words"},
+                        
+    {v:"9", n:"9 pages/2475 words"},                        
+    {v:"10", n:"10 pages/2750 words"},                        
+    {v:"11", n:"11 pages/3025 words"},                        
+    {v:"12", n:"12 pages/3300 words"},                        
+    {v:"13", n:"13 pages/3575 words"},                        
+    {v:"14", n:"14 pages/3850 words"},
+                        
+    {v:"15", n:"15 pages/4125 words"},                        
+    {v:"16", n:"16 pages/4400 words"},                        
+    {v:"17", n:"17 pages/4675 words"},                        
+    {v:"18", n:"18 pages/4950 words"},                        
+    {v:"19", n:"19 pages/5225 words"},                        
+    {v:"20", n:"20 pages/5500 words"},
+                        
+    {v:"21", n:"21 pages/5775 words"},                        
+    {v:"22", n:"22 pages/6050 words"},                        
+    {v:"23", n:"23 pages/6325 words"},                        
+    {v:"24", n:"24 pages/6600 words"},                        
+    {v:"25", n:"25 pages/6875 words"},                        
+    {v:"26", n:"26 pages/7150 words"},
+                        
+    {v:"27", n:"27 pages/7425 words"},                        
+    {v:"28", n:"28 pages/7700 words"},                        
+    {v:"29", n:"29 pages/7975 words"},                        
+    {v:"30", n:"30 pages/8250 words"},                        
+    {v:"31", n:"31 pages/8525 words"},                        
+    {v:"32", n:"32 pages/8800 words"},
+                        
+    {v:"33", n:"33 pages/9075 words"},                        
+    {v:"34", n:"34 pages/9350 words"},                        
+    {v:"35", n:"35 pages/9625 words"},                        
+    {v:"36", n:"36 pages/9900 words"},                        
+    {v:"37", n:"37 pages/10175 words"},                        
+    {v:"38", n:"38 pages/10450 words"},
+                        
+    {v:"39", n:"39 pages/10725 words"},                        
+    {v:"40", n:"40 pages/11000 words"},                        
+    {v:"41", n:"41 pages/11275 words"},                        
+    {v:"42", n:"42 pages/11550 words"},                        
+    {v:"43", n:"43 pages/11825 words"},                        
+    {v:"44", n:"44 pages/12100 words"},
+                        
+    {v:"45", n:"45 pages/12375 words"},                        
+    {v:"46", n:"46 pages/12650 words"},                        
+    {v:"47", n:"47 pages/12925 words"},                        
+    {v:"48", n:"48 pages/13200 words"},                        
+    {v:"49", n:"49 pages/13475 words"},                        
+    {v:"50", n:"50 pages/13750 words"},
+                        
+    {v:"51", n:"51 pages/14025 words"},                        
+    {v:"52", n:"52 pages/14300 words"},                        
+    {v:"53", n:"53 pages/14575 words"},                        
+    {v:"54", n:"54 pages/14850 words"},                        
+    {v:"55", n:"55 pages/15125 words"},                        
+    {v:"56", n:"56 pages/15400 words"},
+                        
+    {v:"57", n:"57 pages/15675 words"},                        
+    {v:"58", n:"58 pages/15950 words"},                        
+    {v:"59", n:"59 pages/16225 words"},                        
+    {v:"60", n:"60 pages/16500 words"},                        
+    {v:"61", n:"61 pages/16775 words"},                        
+    {v:"62", n:"62 pages/17050 words"},
+                        
+    {v:"63", n:"63 pages/17325 words"},                        
+    {v:"64", n:"64 pages/17600 words"},                        
+    {v:"65", n:"65 pages/17875 words"},                        
+    {v:"66", n:"66 pages/18150 words"},                        
+    {v:"67", n:"67 pages/18425 words"},                        
+    {v:"68", n:"68 pages/18700 words"},
+                        
+    {v:"69", n:"69 pages/18975 words"},                        
+    {v:"70", n:"70 pages/19250 words"},                        
+    {v:"71", n:"71 pages/19525 words"},                        
+    {v:"72", n:"72 pages/19800 words"},                        
+    {v:"73", n:"73 pages/20075 words"},                        
+    {v:"74", n:"74 pages/20350 words"},
+                        
+    {v:"75", n:"75 pages/20625 words"},                        
+    {v:"76", n:"76 pages/20900 words"},                        
+    {v:"77", n:"77 pages/21175 words"},                        
+    {v:"78", n:"78 pages/21450 words"},                        
+    {v:"79", n:"79 pages/21725 words"},                        
+    {v:"80", n:"80 pages/22000 words"},
+                        
+    {v:"81", n:"81 pages/22275 words"},                        
+    {v:"82", n:"82 pages/22550 words"},                        
+    {v:"83", n:"83 pages/22825 words"},                        
+    {v:"84", n:"84 pages/23100 words"},                        
+    {v:"85", n:"85 pages/23375 words"},                        
+    {v:"86", n:"86 pages/23650 words"},
+                        
+    {v:"87", n:"87 pages/23925 words"},                        
+    {v:"88", n:"88 pages/24200 words"},                        
+    {v:"89", n:"89 pages/24475 words"},                        
+    {v:"90", n:"90 pages/24750 words"},                        
+    {v:"91", n:"91 pages/25025 words"},                        
+    {v:"92", n:"92 pages/25300 words"},
+                        
+    {v:"93", n:"93 pages/25575 words"},                        
+    {v:"94", n:"94 pages/25850 words"},                        
+    {v:"95", n:"95 pages/26125 words"},                        
+    {v:"96", n:"96 pages/26400 words"},                        
+    {v:"97", n:"97 pages/26675 words"},                        
+    {v:"98", n:"98 pages/26950 words"},
+                        
+    {v:"99", n:"99 pages/27225 words"},                        
+    {v:"100", n:"100 pages/27500 words"},                        
+    {v:"101", n:"101 pages/27775 words"},                        
+    {v:"102", n:"102 pages/28050 words"},                        
+    {v:"103", n:"103 pages/28325 words"},                        
+    {v:"104", n:"104 pages/28600 words"},
+                        
+    {v:"105", n:"105 pages/28875 words"},                        
+    {v:"106", n:"106 pages/29150 words"},                        
+    {v:"107", n:"107 pages/29425 words"},                        
+    {v:"108", n:"108 pages/29700 words"},                        
+    {v:"109", n:"109 pages/29975 words"},                        
+    {v:"110", n:"110 pages/30250 words"},
+                        
+    {v:"111", n:"111 pages/30525 words"},                        
+    {v:"112", n:"112 pages/30800 words"},                        
+    {v:"113", n:"113 pages/31075 words"},                        
+    {v:"114", n:"114 pages/31350 words"},                        
+    {v:"115", n:"115 pages/31625 words"},                        
+    {v:"116", n:"116 pages/31900 words"},
+                        
+    {v:"117", n:"117 pages/32175 words"},                        
+    {v:"118", n:"118 pages/32450 words"},                        
+    {v:"119", n:"119 pages/32725 words"},                        
+    {v:"120", n:"120 pages/33000 words"},                        
+    {v:"121", n:"121 pages/33275 words"},                        
+    {v:"122", n:"122 pages/33550 words"},
+                        
+    {v:"123", n:"123 pages/33825 words"},                        
+    {v:"124", n:"124 pages/34100 words"},                        
+    {v:"125", n:"125 pages/34375 words"},                        
+    {v:"126", n:"126 pages/34650 words"},                        
+    {v:"127", n:"127 pages/34925 words"},                        
+    {v:"128", n:"128 pages/35200 words"},
+                        
+    {v:"129", n:"129 pages/35475 words"},                        
+    {v:"130", n:"130 pages/35750 words"},                        
+    {v:"131", n:"131 pages/36025 words"},                        
+    {v:"132", n:"132 pages/36300 words"},                        
+    {v:"133", n:"133 pages/36575 words"},                        
+    {v:"134", n:"134 pages/36850 words"},
+                        
+    {v:"135", n:"135 pages/37125 words"},                        
+    {v:"136", n:"136 pages/37400 words"},                        
+    {v:"137", n:"137 pages/37675 words"},                        
+    {v:"138", n:"138 pages/37950 words"},                        
+    {v:"139", n:"139 pages/38225 words"},                        
+    {v:"140", n:"140 pages/38500 words"},
+                        
+    {v:"141", n:"141 pages/38775 words"},                        
+    {v:"142", n:"142 pages/39050 words"},                        
+    {v:"143", n:"143 pages/39325 words"},                        
+    {v:"144", n:"144 pages/39600 words"},                        
+    {v:"145", n:"145 pages/39875 words"},                        
+    {v:"146", n:"146 pages/40150 words"},
+                        
+    {v:"147", n:"147 pages/40425 words"},                        
+    {v:"148", n:"148 pages/40700 words"},                        
+    {v:"149", n:"149 pages/40975 words"},                        
+    {v:"150", n:"150 pages/41250 words"},                        
+    {v:"151", n:"151 pages/41525 words"},                        
+    {v:"152", n:"152 pages/41800 words"},
+                        
+    {v:"153", n:"153 pages/42075 words"},                        
+    {v:"154", n:"154 pages/42350 words"},                        
+    {v:"155", n:"155 pages/42625 words"},                        
+    {v:"156", n:"156 pages/42900 words"},                        
+    {v:"157", n:"157 pages/43175 words"},                        
+    {v:"158", n:"158 pages/43450 words"},
+                        
+    {v:"159", n:"159 pages/43725 words"},                        
+    {v:"160", n:"160 pages/44000 words"},                        
+    {v:"161", n:"161 pages/44275 words"},                        
+    {v:"162", n:"162 pages/44550 words"},                        
+    {v:"163", n:"163 pages/44825 words"},                        
+    {v:"164", n:"164 pages/45100 words"},
+                        
+    {v:"165", n:"165 pages/45375 words"},                        
+    {v:"166", n:"166 pages/45650 words"},                        
+    {v:"167", n:"167 pages/45925 words"},                        
+    {v:"168", n:"168 pages/46200 words"},                        
+    {v:"169", n:"169 pages/46475 words"},                        
+    {v:"170", n:"170 pages/46750 words"},
+                        
+    {v:"171", n:"171 pages/47025 words"},                        
+    {v:"172", n:"172 pages/47300 words"},                        
+    {v:"173", n:"173 pages/47575 words"},                        
+    {v:"174", n:"174 pages/47850 words"},                        
+    {v:"175", n:"175 pages/48125 words"},                        
+    {v:"176", n:"176 pages/48400 words"},
+                        
+    {v:"177", n:"177 pages/48675 words"},                        
+    {v:"178", n:"178 pages/48950 words"},                        
+    {v:"179", n:"179 pages/49225 words"},                        
+    {v:"180", n:"180 pages/49500 words"},                        
+    {v:"181", n:"181 pages/49775 words"},                        
+    {v:"182", n:"182 pages/50050 words"},
+                        
+    {v:"183", n:"183 pages/50325 words"},                        
+    {v:"184", n:"184 pages/50600 words"},                        
+    {v:"185", n:"185 pages/50875 words"},                        
+    {v:"186", n:"186 pages/51150 words"},                        
+    {v:"187", n:"187 pages/51425 words"},                        
+    {v:"188", n:"188 pages/51700 words"},
+                        
+    {v:"189", n:"189 pages/51975 words"},                        
+    {v:"190", n:"190 pages/52250 words"},                        
+    {v:"191", n:"191 pages/52525 words"},                        
+    {v:"192", n:"192 pages/52800 words"},                        
+    {v:"193", n:"193 pages/53075 words"},                        
+    {v:"194", n:"194 pages/53350 words"},
+                        
+    {v:"195", n:"195 pages/53625 words"},                        
+    {v:"196", n:"196 pages/53900 words"},                        
+    {v:"197", n:"197 pages/54175 words"},                        
+    {v:"198", n:"198 pages/54450 words"},                        
+    {v:"199", n:"199 pages/54725 words"},                        
+    {v:"200", n:"200 pages/55000 words"},                    
+];
+
+var curr_sel = [
+    {v:"1", n:"USD"},
+    {v:"2", n:"GBP"},
+    {v:"3", n:"CAD"},
+    {v:"4", n:"AUD"},
+    {v:"5", n:"EUR"}
+];
