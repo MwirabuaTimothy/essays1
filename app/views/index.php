@@ -117,9 +117,7 @@
                     <input type="password" placeholder="Repeat password">
                     <!-- <input type="password" data-bind="value: passwordconfirm" placeholder="Repeat password"> -->
                 </div>
-                {{#view App.PopupView}}
-                  <p> Thank you for signing up! </p>
-                {{/view}}
+                
                 <a class="button-block button-positive">Sign Up</a>
             </form>
         </div>
@@ -130,16 +128,16 @@
 <script type="text/x-handlebars" data-template-name="services">
     <div class="services">  
         {{#each model}}
-
             <div class="span6">
+
                 <h3>{{title}}</h3>
                 <ul>
                     {{#each sub}}
-                      <li {{action popst this}}>{{ st }}</li>
+                      <li {{action "popst" this}}>{{ st }}</li>
                     {{/each}}
                 </ul>
+
             </div>
-            
         {{/each}}
     </div>
 </script>
@@ -148,25 +146,26 @@
   <div class="popup">
     <button class="popup-dismiss">x</button>
     <div class="popup-content">
-        {{yield}}
+        {{#view App.PopupView}}
+          <p> Thank you for signing up! </p>
+        {{/view}}
         hahahahh
     </div>
   </div>
 </script>
 
 <script type="text/x-handlebars" data-template-name="modal">
+    
     <div class="modal-overlay"></div>
-
     <div class="modal soft">
-      <h1>Modal Dialog.</h1>
-
-      <p>The model dialog is opened by firing an event i.e. `openModal` handled by the router.</p>
-
-      <p>But to close it, we will be sending an event to be handled by the view itself instead of the router, since there is no state change in opening this modal dialog.</p>
-
-      <button class="btn space-big soft" {{action "closeModal" target="view"}}>Close Dialog</button>
+    <span class="header">
+        <button class="popup-dismiss" {{action "closeModal" target="view"}}>x</button>
+        <h3>{{categorydata.st}}</h3>
+    </span>
+        {{categorydata.desc}}
+      <button class="btn space-big soft" {{action "closeModal" target="view"}}>Back</button>
     </div>
-  </script>
+</script>
 
 <script type="text/x-handlebars" data-template-name="introduction">
     <div class="intro">

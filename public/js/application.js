@@ -10,15 +10,15 @@ App.Router.reopen({
 
 App.Router.map(function() {
     // rootURL: '/app';
-    this.route('introduction');
-    this.route('about-us');
-    this.route('services');
-    this.route('contact-us');
-    this.route('my-order');
-    this.route('faq');
-    this.route('sign-in');
-    this.route('sign-up');
-    this.route('popup');
+    this.resource('introduction');
+    this.resource('about-us');
+    this.resource('services');
+    this.resource('contact-us');
+    this.resource('my-order');
+    this.resource('faq');
+    this.resource('sign-in');
+    this.resource('sign-up');
+    this.resource('popup');
 });
 
 App.initializer({
@@ -27,9 +27,9 @@ App.initializer({
         container.injection('application:main', 'store', 'store:main');
     }
 });
-
+var categorydata = {};
 App.ApplicationRoute = Ember.Route.extend({
-    events: {
+    actions: {
         /** BASIC PAGE TRANSITIONS ***/
           introduction: function() {
             this.transitionToAnimated('introduction', {main: 'fade'})
@@ -74,41 +74,50 @@ App.ApplicationRoute = Ember.Route.extend({
         // }
 
         , popst: function(param) {
-            // this.transitionToAnimated('popup', { main: 'flip' }, param);
-            var modalView = this.container.lookup('view:modal')
+            categorydata = param;
+            var modalView = this.container.lookup('view:popup')
             modalView.append();
+            // this.transitionToAnimated('popup', { main: 'flip' });
+            console.log(categorydata);
         }
+        // ,  openModal: function() {
+        //   var modalView = this.container.lookup('view:modal')
+        //   modalView.append();
+        // }
     }
 });
  
-App.PopupView = Ember.View.extend({
-    layoutName: 'modal',
-    closeModal: function(){
-        this.remove();
-    }
-});
-    
-// App.PopupRoute = Ember.Route.extend({
-//    model: function(){
-//     // return this.;
-//    }    
-// })
-// App.ApplicationController = Ember.ObjectController.extend({
-//     , signin: function() {
-//             this.render({ outlet: 'auth' });
-//     }
-//     , signup: function() {
-//         this.render({ outlet: 'auth' });
+// App.ModalView = Ember.View.extend({
+//     layoutName: 'modal',
+//     closeModal: function(){
+//         this.remove();
 //     }
 // });
 
-// this.route('introduction');
-// this.route('about-us');
-// this.route('services');
-// this.route('contact-us');
-// this.route('my-order');
-// this.route('sign-in');
-// this.route('sign-up');
+App.PopupView = Ember.View.extend({
+    layoutName: "modal",
+    closeModal: function(){
+        this.remove();
+    },
+    // title: "My Mama",
+    // desc: "Description of soemthing" 
+});
+App.PopupRoute = Ember.Route.extend({
+    model: function(param) {
+        categorydata = param;
+        return categorydata;
+    } 
+});
+
+App.ServicesRoute = Ember.Route.extend({
+    model: function() {
+        return servicesJSON;
+    } 
+    // , setupControllers: function(controller, model){
+    //     controller.set('faq', model);
+    // }
+});
+
 
 // Animated Transitions need explicit view declarations
 App.ApplicationView = Ember.View.extend({classNames: ['application']});
@@ -130,7 +139,8 @@ App.IndexRoute = Ember.Route.extend({
 programmers =  [
     {firstName: "Yehuda", id: 1},
     {firstName: "Tom",    id: 2}
-  ]
+  ];
+
 App.SignUpController = Ember.Controller.extend({
     programmers: function(){
         return programmers;
@@ -149,9 +159,6 @@ App.SignUpRoute = Ember.Route.extend({
 });
 
 
-App.MyOrderController = Ember.Controller.extend({
-  names: ["Yehuda", "Tom", "Amazing", "Grace"]
-});
 
 App.MyOrderRoute = Ember.Route.extend({
     afterModel: function() {
