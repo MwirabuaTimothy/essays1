@@ -1,3 +1,3 @@
 
-ember.js, laravel.php, git.svn
+ember.js, laravel php
 
